@@ -65,27 +65,20 @@
     }
 
     .logo {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: white;
-      text-decoration: none;
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      font-family: 'Fredoka', sans-serif;
+      text-decoration: none;
     }
 
-    .logo span {
-      color: var(--primary-gold);
+    .logo-img {
+      height: 50px;
+      width: auto;
+      transition: all 0.3s ease;
     }
 
-    .navbar.scrolled .logo {
-      color: var(--primary-blue);
-    }
-
-    .logo i {
-      font-size: 2rem;
-      color: var(--primary-gold);
+    .navbar.scrolled .logo-img {
+      filter: brightness(0.8);
     }
 
     .nav-links {
@@ -236,6 +229,8 @@
     .hero-image img {
       max-width: 100%;
       width: 500px;
+      border-radius: 30px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     }
 
     @keyframes float {
@@ -353,28 +348,30 @@
       margin-bottom: 1.5rem;
     }
 
+    /* Programs Section - Dynamically Loaded from Firebase */
     .programs-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      max-width: 1200px;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2.5rem;
+      max-width: 1400px;
       margin: 0 auto;
     }
 
     .program-card {
       background: white;
-      padding: 2rem;
+      padding: 2.5rem;
       border-radius: 30px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      border: 2px solid transparent;
       transition: all 0.3s;
+      border: 2px solid transparent;
       position: relative;
       overflow: hidden;
     }
 
     .program-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(30, 58, 138, 0.1);
       border-color: var(--primary-gold);
-      transform: translateY(-5px);
     }
 
     .program-card.little {
@@ -389,6 +386,20 @@
       border-top: 5px solid #10B981;
     }
 
+    .program-badge {
+      position: absolute;
+      top: 1.5rem;
+      right: -2rem;
+      background: var(--primary-gold);
+      color: var(--primary-blue);
+      padding: 0.3rem 2rem;
+      transform: rotate(45deg);
+      font-size: 0.8rem;
+      font-weight: 600;
+      width: 150px;
+      text-align: center;
+    }
+
     .program-age {
       display: inline-block;
       background: var(--primary-gold);
@@ -401,7 +412,7 @@
     }
 
     .program-card h3 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       color: var(--primary-blue);
       margin-bottom: 0.5rem;
     }
@@ -413,8 +424,22 @@
       font-size: 1.1rem;
     }
 
+    .program-price {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      margin-bottom: 1rem;
+    }
+
+    .program-price span {
+      font-size: 1rem;
+      color: var(--text-light);
+      font-weight: 400;
+    }
+
     .program-features {
       list-style: none;
+      margin-bottom: 2rem;
     }
 
     .program-features li {
@@ -428,6 +453,7 @@
     .program-features li i {
       color: var(--primary-gold);
       font-size: 1rem;
+      min-width: 20px;
     }
 
     .program-goal {
@@ -437,6 +463,18 @@
       border-radius: 15px;
       font-weight: 600;
       color: var(--primary-blue);
+    }
+
+    .program-loading {
+      text-align: center;
+      padding: 3rem;
+      grid-column: 1 / -1;
+    }
+
+    .program-loading i {
+      font-size: 3rem;
+      color: var(--primary-gold);
+      margin-bottom: 1rem;
     }
 
     .values-grid {
@@ -811,13 +849,6 @@
       border: 1px solid #f5c6cb;
     }
 
-    .form-status.info {
-      display: block;
-      background: #d1ecf1;
-      color: #0c5460;
-      border: 1px solid #bee5eb;
-    }
-
     .toast {
       position: fixed;
       top: 20px;
@@ -876,6 +907,16 @@
       .contact-container {
         grid-template-columns: 1fr;
       }
+      
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 100px;
+      }
+      
+      .hero-buttons {
+        justify-content: center;
+      }
     }
 
     @media (max-width: 768px) {
@@ -883,22 +924,24 @@
         display: none;
       }
 
-      .hero {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 100px;
-      }
-
       .hero-content h1 {
         font-size: 2.5rem;
       }
 
-      .hero-buttons {
-        justify-content: center;
-      }
-
       .section-title h2 {
         font-size: 2rem;
+      }
+      
+      .programs-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .why-us-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -918,8 +961,7 @@
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <a href="#" class="logo">
-      <i class="fas fa-child"></i>
-      Living<span>English</span> Kids
+      <img src="image.png" alt="LivingEnglish Kids" class="logo-img">
     </a>
     <div class="nav-links">
       <a href="#home">Home</a>
@@ -956,7 +998,7 @@
     </div>
     
     <div class="hero-image" data-aos="fade-left">
-      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='none'/%3E%3Ccircle cx='200' cy='200' r='180' fill='rgba(251,191,36,0.2)'/%3E%3Ccircle cx='200' cy='200' r='140' fill='rgba(251,191,36,0.15)'/%3E%3Ccircle cx='200' cy='200' r='100' fill='rgba(251,191,36,0.1)'/%3E%3Cpath d='M150 150 L250 150 L280 200 L250 250 L150 250 L120 200 Z' fill='white' opacity='0.3'/%3E%3Ctext x='140' y='220' font-family='Arial' font-size='40' fill='white' opacity='0.5'%3E%E2%9C%8D%3C/text%3E%3C/svg%3E" alt="LivingEnglish Kids">
+      <img src="image.png" alt="LivingEnglish Kids Logo" style="background: white; padding: 2rem;">
     </div>
   </section>
 
@@ -1056,65 +1098,17 @@
     </div>
   </section>
 
-  <!-- Programs -->
+  <!-- Programs Section - Dynamically Loaded from Firebase -->
   <section id="programs">
     <div class="section-title" data-aos="fade-up">
       <h2>Our <span class="gold-accent">Programs</span></h2>
       <p>Tailored English learning programs for every age group</p>
     </div>
     
-    <div class="programs-grid">
-      <!-- Little Speakers -->
-      <div class="program-card little" data-aos="fade-up" data-aos-delay="100">
-        <span class="program-age">Ages 4-6</span>
-        <h3>Little Speakers</h3>
-        <div class="program-focus">Fun + Listening + Basic Speaking</div>
-        <ul class="program-features">
-          <li><i class="fas fa-check"></i> Basic vocabulary building</li>
-          <li><i class="fas fa-check"></i> Songs & games</li>
-          <li><i class="fas fa-check"></i> Listening & Pronunciation practice</li>
-          <li><i class="fas fa-check"></i> Confidence activities</li>
-          <li><i class="fas fa-check"></i> Storytelling with pictures</li>
-          <li><i class="fas fa-check"></i> Action games (TPR Method)</li>
-          <li><i class="fas fa-check"></i> Simple conversations</li>
-        </ul>
-        <div class="program-goal">
-          <i class="fas fa-flag-checkered"></i> Goal: Comfort speaking, Correct pronunciation, Love for English
-        </div>
-      </div>
-      
-      <!-- Young Communicators -->
-      <div class="program-card young" data-aos="fade-up" data-aos-delay="200">
-        <span class="program-age">Ages 7-10</span>
-        <h3>Young Communicators</h3>
-        <div class="program-focus">Confidence + Structured Speaking</div>
-        <ul class="program-features">
-          <li><i class="fas fa-check"></i> Show & tell</li>
-          <li><i class="fas fa-check"></i> Storytelling & creation</li>
-          <li><i class="fas fa-check"></i> Role play</li>
-          <li><i class="fas fa-check"></i> Public speaking basics</li>
-          <li><i class="fas fa-check"></i> Debate (simple topics)</li>
-        </ul>
-        <div class="program-goal">
-          <i class="fas fa-flag-checkered"></i> Goal: Structured communication, Confidence in speaking
-        </div>
-      </div>
-      
-      <!-- Bright Leaders -->
-      <div class="program-card bright" data-aos="fade-up" data-aos-delay="300">
-        <span class="program-age">Ages 11-14</span>
-        <h3>Bright Leaders</h3>
-        <div class="program-focus">Advanced Communication</div>
-        <ul class="program-features">
-          <li><i class="fas fa-check"></i> Debates</li>
-          <li><i class="fas fa-check"></i> Presentations</li>
-          <li><i class="fas fa-check"></i> Advanced pronunciation</li>
-          <li><i class="fas fa-check"></i> Communication skills</li>
-          <li><i class="fas fa-check"></i> Leadership speaking</li>
-        </ul>
-        <div class="program-goal">
-          <i class="fas fa-flag-checkered"></i> Goal: Advanced fluency, Leadership communication
-        </div>
+    <div class="programs-grid" id="programsGrid">
+      <div class="program-loading">
+        <i class="fas fa-spinner fa-spin"></i>
+        <p>Loading programs...</p>
       </div>
     </div>
   </section>
@@ -1132,7 +1126,7 @@
           <i class="fas fa-calendar-week"></i>
         </div>
         <h3>Weekly Classes</h3>
-        <ul class="feature-list">
+        <ul class="program-features">
           <li><i class="fas fa-check"></i> 2-3 Sessions per week</li>
           <li><i class="fas fa-check"></i> Group size 8-12 students</li>
           <li><i class="fas fa-check"></i> Consistent learning</li>
@@ -1145,7 +1139,7 @@
         </div>
         <h3>Weekend Programs</h3>
         <h4 style="color: var(--primary-gold); margin-bottom: 1rem;">The Confidence Club</h4>
-        <ul class="feature-list">
+        <ul class="program-features">
           <li><i class="fas fa-check"></i> Public speaking</li>
           <li><i class="fas fa-check"></i> Drama and role play</li>
           <li><i class="fas fa-check"></i> Presentation skills</li>
@@ -1379,11 +1373,8 @@
       
       <div class="footer-section">
         <h4>Programs</h4>
-        <ul>
-          <li><a href="#">Little Speakers (4-6)</a></li>
-          <li><a href="#">Young Communicators (7-10)</a></li>
-          <li><a href="#">Bright Leaders (11-14)</a></li>
-          <li><a href="#">Confidence Club</a></li>
+        <ul id="footerPrograms">
+          <li><i class="fas fa-spinner fa-spin"></i> Loading...</li>
         </ul>
       </div>
       
@@ -1453,9 +1444,8 @@
   
   <!-- Firebase SDKs -->
   <script type="module">
-    // Import Firebase SDKs
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
-    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+    import { getFirestore, collection, getDocs, query, orderBy, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-analytics.js";
 
     // Firebase configuration
@@ -1542,6 +1532,127 @@
         throw error;
       }
     }
+
+    // Load Programs from Firebase
+    async function loadPrograms() {
+      try {
+        const programsGrid = document.getElementById('programsGrid');
+        const footerPrograms = document.getElementById('footerPrograms');
+        
+        // Try to load from Firebase first
+        const programsRef = collection(db, "programs");
+        const q = query(programsRef, orderBy("createdAt", "desc"));
+        const querySnapshot = await getDocs(q);
+        
+        let programs = [];
+        
+        if (!querySnapshot.empty) {
+          // Use programs from Firebase
+          querySnapshot.forEach((doc) => {
+            programs.push({ id: doc.id, ...doc.data() });
+          });
+        } else {
+          // If no programs in Firebase, use default programs
+          programs = [
+            {
+              id: 'little-default',
+              name: 'Little Speakers',
+              ageGroup: '4-6 years',
+              focus: 'Fun + Listening + Basic Speaking',
+              price: '200,000 TZS/month',
+              features: [
+                'Basic vocabulary building',
+                'Songs & games',
+                'Listening & Pronunciation practice',
+                'Confidence activities',
+                'Storytelling with pictures',
+                'Action games (TPR Method)',
+                'Simple conversations'
+              ],
+              goal: 'Comfort speaking, Correct pronunciation, Love for English',
+              type: 'little'
+            },
+            {
+              id: 'young-default',
+              name: 'Young Communicators',
+              ageGroup: '7-10 years',
+              focus: 'Confidence + Structured Speaking',
+              price: '250,000 TZS/month',
+              features: [
+                'Show & tell',
+                'Storytelling & creation',
+                'Role play',
+                'Public speaking basics',
+                'Debate (simple topics)'
+              ],
+              goal: 'Structured communication, Confidence in speaking',
+              type: 'young'
+            },
+            {
+              id: 'bright-default',
+              name: 'Bright Leaders',
+              ageGroup: '11-14 years',
+              focus: 'Advanced Communication',
+              price: '300,000 TZS/month',
+              features: [
+                'Debates',
+                'Presentations',
+                'Advanced pronunciation',
+                'Communication skills',
+                'Leadership speaking'
+              ],
+              goal: 'Advanced fluency, Leadership communication',
+              type: 'bright'
+            }
+          ];
+        }
+        
+        // Render programs grid
+        let programsHTML = '';
+        programs.forEach((program, index) => {
+          const type = program.type || (index === 0 ? 'little' : index === 1 ? 'young' : 'bright');
+          
+          programsHTML += `
+            <div class="program-card ${type}" data-aos="fade-up" data-aos-delay="${(index + 1) * 100}">
+              ${program.popular ? '<div class="program-badge">Most Popular</div>' : ''}
+              <span class="program-age">Ages ${program.ageGroup || '4-14'}</span>
+              <h3>${program.name}</h3>
+              <div class="program-focus">${program.focus || ''}</div>
+              ${program.price ? `<div class="program-price">${program.price}</div>` : ''}
+              <ul class="program-features">
+                ${program.features ? program.features.map(feature => `
+                  <li><i class="fas fa-check"></i> ${feature}</li>
+                `).join('') : ''}
+              </ul>
+              ${program.goal ? `
+                <div class="program-goal">
+                  <i class="fas fa-flag-checkered"></i> Goal: ${program.goal}
+                </div>
+              ` : ''}
+              <button class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;" onclick="openModal(event)">
+                Enroll Now <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          `;
+        });
+        
+        programsGrid.innerHTML = programsHTML;
+        
+        // Update footer with program links
+        let footerHTML = '';
+        programs.forEach(program => {
+          footerHTML += `<li><a href="#programs">${program.name} (${program.ageGroup || 'All ages'})</a></li>`;
+        });
+        footerPrograms.innerHTML = footerHTML;
+        
+      } catch (error) {
+        console.error('Error loading programs:', error);
+        showToast('Error loading programs', 'error');
+      }
+    }
+
+    // Load programs on page load
+    loadPrograms();
 
     // Handle main contact form
     document.getElementById('contactForm').addEventListener('submit', async (e) => {
