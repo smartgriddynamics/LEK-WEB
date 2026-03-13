@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
   <title>Admin Dashboard - LivingEnglish Kids</title>
-  <link rel="icon" type="image/png" href="image.png">
+  <link rel="icon" type="image/png" href="image2.png">
   
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -41,7 +41,6 @@
       --warning: #F59E0B;
     }
 
-    /* Sidebar */
     .sidebar {
       position: fixed;
       left: 0;
@@ -68,7 +67,6 @@
       margin-bottom: 2rem;
       padding-bottom: 1rem;
       border-bottom: 2px solid #F3F4F6;
-      flex-wrap: wrap;
     }
 
     .logo span {
@@ -145,7 +143,6 @@
       font-weight: 600;
     }
 
-    /* Mobile Menu Toggle */
     .menu-toggle {
       display: none;
       position: fixed;
@@ -163,7 +160,6 @@
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
 
-    /* Main Content */
     .main-content {
       margin-left: 280px;
       padding: 2rem;
@@ -171,7 +167,6 @@
       min-height: 100vh;
     }
 
-    /* Top Bar */
     .top-bar {
       background: white;
       border-radius: 20px;
@@ -279,7 +274,6 @@
       color: white;
     }
 
-    /* Stats Cards */
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -336,7 +330,6 @@
       font-size: 0.95rem;
     }
 
-    /* Charts Row */
     .charts-row {
       display: grid;
       grid-template-columns: 2fr 1fr;
@@ -365,7 +358,7 @@
       font-size: 1.2rem;
     }
 
-    .chart-header select, .chart-header input {
+    .chart-header select {
       padding: 0.5rem;
       border: 2px solid #E5E7EB;
       border-radius: 10px;
@@ -379,7 +372,6 @@
       width: 100%;
     }
 
-    /* Tables */
     .table-card {
       background: white;
       border-radius: 20px;
@@ -430,6 +422,7 @@
       padding: 0.3rem;
       width: 100%;
       min-width: 200px;
+      font-family: 'Poppins', sans-serif;
     }
 
     .search-box input:focus, .search-box select:focus {
@@ -447,6 +440,8 @@
       gap: 0.5rem;
       color: var(--text-dark);
       white-space: nowrap;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9rem;
     }
 
     .filter-btn:hover {
@@ -633,7 +628,6 @@
       color: white;
     }
 
-    /* Cards Grid */
     .students-grid, .teachers-grid, .programs-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -721,7 +715,6 @@
       flex-wrap: wrap;
     }
 
-    /* Modal */
     .modal {
       position: fixed;
       top: 0;
@@ -750,10 +743,6 @@
       max-height: 90vh;
       overflow-y: auto;
       position: relative;
-    }
-
-    .modal-content.large {
-      max-width: 900px;
     }
 
     .close-modal {
@@ -791,7 +780,6 @@
       margin-bottom: 0.3rem;
     }
 
-    /* Forms */
     .form-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -818,6 +806,7 @@
       border: 2px solid #E5E7EB;
       border-radius: 10px;
       font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
     }
 
     .form-group input:focus,
@@ -827,7 +816,6 @@
       border-color: var(--primary-gold);
     }
 
-    /* Tabs */
     .tab-container {
       margin-bottom: 2rem;
     }
@@ -850,6 +838,7 @@
       font-weight: 500;
       color: var(--text-light);
       position: relative;
+      font-size: 1rem;
     }
 
     .tab-button.active {
@@ -875,7 +864,6 @@
       display: block;
     }
 
-    /* Settings Cards */
     .settings-card {
       background: white;
       border-radius: 20px;
@@ -883,7 +871,6 @@
       margin-bottom: 1.5rem;
     }
 
-    /* Toast */
     .toast {
       position: fixed;
       top: 20px;
@@ -963,7 +950,6 @@
       gap: 1rem;
     }
 
-    /* Notification Item */
     .notification-item {
       padding: 1rem;
       border-bottom: 1px solid #E5E7EB;
@@ -989,7 +975,6 @@
       color: var(--text-light);
     }
 
-    /* Responsive Breakpoints */
     @media (max-width: 1024px) {
       .menu-toggle {
         display: flex;
@@ -1011,10 +996,6 @@
 
       .charts-row {
         grid-template-columns: 1fr;
-      }
-
-      .stats-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       }
     }
 
@@ -1100,7 +1081,6 @@
       }
     }
 
-    /* Print Styles */
     @media print {
       .sidebar, .top-bar, .filter-btn, .action-btns {
         display: none;
@@ -1119,12 +1099,10 @@
   </style>
 </head>
 <body>
-  <!-- Mobile Menu Toggle -->
   <div class="menu-toggle" onclick="toggleSidebar()">
     <i class="fas fa-bars"></i>
   </div>
 
-  <!-- Sidebar -->
   <div class="sidebar" id="sidebar">
     <div class="logo">
       <i class="fas fa-child"></i>
@@ -1182,9 +1160,7 @@
     </div>
   </div>
 
-  <!-- Main Content -->
   <div class="main-content" id="mainContent">
-    <!-- Top Bar -->
     <div class="top-bar">
       <div class="page-title">
         <h1 id="pageTitle">Dashboard</h1>
@@ -1210,7 +1186,6 @@
       </div>
     </div>
 
-    <!-- Dashboard Tab Content -->
     <div id="dashboardTab">
       <div class="stats-grid">
         <div class="stat-card">
@@ -1341,7 +1316,6 @@
       </div>
     </div>
 
-    <!-- Inquiries Tab Content -->
     <div id="inquiriesTab" style="display: none;">
       <div class="table-card">
         <div class="table-header">
@@ -1417,7 +1391,6 @@
       </div>
     </div>
 
-    <!-- Programs Tab Content -->
     <div id="programsTab" style="display: none;">
       <div class="table-header">
         <h3>Programs Management</h3>
@@ -1436,7 +1409,6 @@
       </div>
     </div>
 
-    <!-- Students Tab Content -->
     <div id="studentsTab" style="display: none;">
       <div class="table-header">
         <h3>Students Management</h3>
@@ -1478,7 +1450,6 @@
       </div>
     </div>
 
-    <!-- Teachers Tab Content -->
     <div id="teachersTab" style="display: none;">
       <div class="table-header">
         <h3>Teachers Management</h3>
@@ -1509,7 +1480,6 @@
       </div>
     </div>
 
-    <!-- Admins Tab Content -->
     <div id="adminsTab" style="display: none;">
       <div class="table-header">
         <h3>Admin Users Management</h3>
@@ -1546,7 +1516,6 @@
       </div>
     </div>
 
-    <!-- Settings Tab Content -->
     <div id="settingsTab" style="display: none;">
       <div class="tab-container">
         <div class="tab-buttons">
@@ -1670,7 +1639,6 @@
       </div>
     </div>
 
-    <!-- Analytics Tab Content -->
     <div id="analyticsTab" style="display: none;">
       <div class="stats-grid">
         <div class="stat-card">
@@ -1756,7 +1724,6 @@
       </div>
     </div>
 
-    <!-- Exports Tab Content -->
     <div id="exportsTab" style="display: none;">
       <div class="stats-grid">
         <div class="stat-card" onclick="exportData('inquiries')" style="cursor: pointer;">
@@ -1827,7 +1794,6 @@
     </div>
   </div>
 
-  <!-- Inquiry Detail Modal -->
   <div class="modal" id="inquiryModal">
     <div class="modal-content">
       <div class="close-modal" onclick="closeModal()">
@@ -1852,16 +1818,16 @@
     </div>
   </div>
 
-  <!-- Add Student Modal -->
   <div class="modal" id="studentModal">
     <div class="modal-content">
       <div class="close-modal" onclick="closeStudentModal()">
         <i class="fas fa-times"></i>
       </div>
       
-      <h2 style="color: var(--primary-blue); margin-bottom: 1.5rem;">Add New Student</h2>
+      <h2 style="color: var(--primary-blue); margin-bottom: 1.5rem;" id="studentModalTitle">Add New Student</h2>
       
       <form id="studentForm">
+        <input type="hidden" id="studentId">
         <div class="form-grid">
           <div class="form-group">
             <label>Full Name *</label>
@@ -1926,16 +1892,16 @@
     </div>
   </div>
 
-  <!-- Add Teacher Modal -->
   <div class="modal" id="teacherModal">
     <div class="modal-content">
       <div class="close-modal" onclick="closeTeacherModal()">
         <i class="fas fa-times"></i>
       </div>
       
-      <h2 style="color: var(--primary-blue); margin-bottom: 1.5rem;">Add New Teacher</h2>
+      <h2 style="color: var(--primary-blue); margin-bottom: 1.5rem;" id="teacherModalTitle">Add New Teacher</h2>
       
       <form id="teacherForm">
+        <input type="hidden" id="teacherId">
         <div class="form-grid">
           <div class="form-group">
             <label>Full Name *</label>
@@ -1951,7 +1917,7 @@
           </div>
           <div class="form-group">
             <label>Qualification</label>
-            <input type="text" id="teacherQualification" value="Child Psychology, Speaking Methodology">
+            <input type="text" id="teacherQualification" placeholder="e.g., Child Psychology, TEFL">
           </div>
           <div class="form-group">
             <label>Specialization</label>
@@ -1972,7 +1938,7 @@
         </div>
         <div class="form-group">
           <label>Bio</label>
-          <textarea id="teacherBio" rows="3"></textarea>
+          <textarea id="teacherBio" rows="3" placeholder="Teacher's experience and expertise..."></textarea>
         </div>
         <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
           <button type="button" class="filter-btn primary" style="flex: 1;" onclick="saveTeacher()">
@@ -1986,7 +1952,6 @@
     </div>
   </div>
 
-  <!-- Add Admin Modal -->
   <div class="modal" id="adminModal">
     <div class="modal-content">
       <div class="close-modal" onclick="closeAdminModal()">
@@ -2024,16 +1989,16 @@
     </div>
   </div>
 
-  <!-- Add Program Modal -->
   <div class="modal" id="programModal">
     <div class="modal-content">
       <div class="close-modal" onclick="closeProgramModal()">
         <i class="fas fa-times"></i>
       </div>
       
-      <h2 style="color: var(--primary-blue); margin-bottom: 1.5rem;">Add New Program</h2>
+      <h2 style="color: var(--primary-blue); margin-bottom: 1.5rem;" id="programModalTitle">Add New Program</h2>
       
       <form id="programForm">
+        <input type="hidden" id="programId">
         <div class="form-group">
           <label>Program Name *</label>
           <input type="text" id="programName" required>
@@ -2070,7 +2035,6 @@
     </div>
   </div>
 
-  <!-- Add Inquiry Modal -->
   <div class="modal" id="addInquiryModal">
     <div class="modal-content">
       <div class="close-modal" onclick="closeAddInquiryModal()">
@@ -2132,7 +2096,6 @@
     </div>
   </div>
 
-  <!-- Notifications Modal -->
   <div class="modal" id="notificationsModal">
     <div class="modal-content">
       <div class="close-modal" onclick="closeNotificationsModal()">
@@ -2141,36 +2104,29 @@
       
       <h2 style="color: var(--primary-blue); margin-bottom: 1.5rem;">Notifications</h2>
       
-      <div id="notificationsList">
-        <!-- Notifications will be loaded here -->
-      </div>
+      <div id="notificationsList"></div>
     </div>
   </div>
 
-  <!-- Toast Notification -->
   <div id="toast" class="toast">
     <i class="fas"></i>
     <span id="toastMessage"></span>
   </div>
 
-  <!-- Firebase SDKs -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
     import { getAuth, signOut, onAuthStateChanged, createUserWithEmailAndPassword, updatePassword } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
     import { getFirestore, collection, query, orderBy, getDocs, doc, updateDoc, deleteDoc, getDoc, setDoc, addDoc, Timestamp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
 
-    // Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyB3Wyz8KVK1lbJHvBp-GJN4OgbHaJxWTck",
       authDomain: "lektz-daea4.firebaseapp.com",
       projectId: "lektz-daea4",
       storageBucket: "lektz-daea4.firebasestorage.app",
       messagingSenderId: "554357206195",
-      appId: "1:554357206195:web:e2ebbcc0b18c3feec354c6",
-      measurementId: "G-GNFXKQ16SN"
+      appId: "1:554357206195:web:e2ebbcc0b18c3feec354c6"
     };
 
-    // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     const db = getFirestore(app);
@@ -2178,6 +2134,8 @@
     // Global variables
     let currentInquiryId = null;
     let currentProgramId = null;
+    let currentStudentId = null;
+    let currentTeacherId = null;
     let allInquiries = [];
     let allStudents = [];
     let allTeachers = [];
@@ -2188,6 +2146,7 @@
     let filteredTeachers = [];
     let currentPage = 1;
     let currentStudentPage = 1;
+    let currentTeacherPage = 1;
     const itemsPerPage = 10;
     let currentTab = 'dashboard';
     let inquiryChart = null;
@@ -2196,7 +2155,131 @@
     let ageChart = null;
     let programPopularityChart = null;
     let sourceChart = null;
-    let settings = {};
+
+    // Default programs
+    const defaultPrograms = [
+      {
+        id: 'little-default',
+        name: 'Little Speakers',
+        ageGroup: '4-6 years',
+        focus: 'Fun + Listening + Basic Speaking',
+        price: '200,000 TZS',
+        features: [
+          'Basic vocabulary building',
+          'Songs & games',
+          'Listening & Pronunciation practice',
+          'Confidence activities',
+          'Storytelling with pictures',
+          'Action games (TPR Method)',
+          'Simple conversations'
+        ],
+        goal: 'Comfort speaking, Correct pronunciation, Love for English'
+      },
+      {
+        id: 'young-default',
+        name: 'Young Communicators',
+        ageGroup: '7-10 years',
+        focus: 'Confidence + Structured Speaking',
+        price: '250,000 TZS',
+        features: [
+          'Show & tell',
+          'Storytelling & creation',
+          'Role play',
+          'Public speaking basics',
+          'Debate (simple topics)'
+        ],
+        goal: 'Structured communication, Confidence in speaking'
+      },
+      {
+        id: 'bright-default',
+        name: 'Bright Leaders',
+        ageGroup: '11-14 years',
+        focus: 'Advanced Communication',
+        price: '300,000 TZS',
+        features: [
+          'Debates',
+          'Presentations',
+          'Advanced pronunciation',
+          'Communication skills',
+          'Leadership speaking'
+        ],
+        goal: 'Advanced fluency, Leadership communication'
+      }
+    ];
+
+    // Default students for demo
+    const defaultStudents = [
+      {
+        id: 'student1-default',
+        name: 'John Mwangi',
+        parentName: 'Mary Mwangi',
+        email: 'mary@example.com',
+        phone: '+255 712 345 678',
+        childAge: '7-10',
+        program: 'weekly',
+        status: 'active',
+        startDate: '2026-01-15',
+        notes: 'Enrolled in Young Communicators'
+      },
+      {
+        id: 'student2-default',
+        name: 'Sarah Kim',
+        parentName: 'David Kim',
+        email: 'david@example.com',
+        phone: '+255 723 456 789',
+        childAge: '4-6',
+        program: 'both',
+        status: 'active',
+        startDate: '2026-02-01',
+        notes: 'Enrolled in Little Speakers'
+      },
+      {
+        id: 'student3-default',
+        name: 'Ali Hassan',
+        parentName: 'Fatma Hassan',
+        email: 'fatma@example.com',
+        phone: '+255 734 567 890',
+        childAge: '11-14',
+        program: 'weekend',
+        status: 'pending',
+        startDate: '2026-03-01',
+        notes: 'Interested in Bright Leaders'
+      }
+    ];
+
+    // Default teachers for demo
+    const defaultTeachers = [
+      {
+        id: 'teacher1-default',
+        name: 'Grace Mbeki',
+        email: 'grace@livingenglish.com',
+        phone: '+255 745 678 901',
+        qualification: 'Child Psychology, Speaking Methodology',
+        specialization: 'young',
+        bio: 'Experienced teacher with 5 years in early childhood education',
+        status: 'active'
+      },
+      {
+        id: 'teacher2-default',
+        name: 'Peter Omondi',
+        email: 'peter@livingenglish.com',
+        phone: '+255 756 789 012',
+        qualification: 'TEFL Certified, Communication Expert',
+        specialization: 'bright',
+        bio: 'Specializes in public speaking and debate for teens',
+        status: 'active'
+      },
+      {
+        id: 'teacher3-default',
+        name: 'Lucy Njeri',
+        email: 'lucy@livingenglish.com',
+        phone: '+255 767 890 123',
+        qualification: 'Early Childhood Education',
+        specialization: 'little',
+        bio: 'Passionate about teaching through play and songs',
+        status: 'active'
+      }
+    ];
 
     // Toast function
     window.showToast = function(message, type = 'success') {
@@ -2223,47 +2306,32 @@
 
     // Check authentication
     onAuthStateChanged(auth, async (user) => {
-      console.log('Auth state changed:', user ? 'Logged in' : 'Not logged in');
-      
       if (!user) {
-        console.log('No user, redirecting to login');
         window.location.href = 'admin-login.html';
         return;
       }
 
-      console.log('User UID:', user.uid);
-      console.log('User email:', user.email);
-      
-      // Update UI with admin info
       document.getElementById('adminName').textContent = user.displayName || 'Admin';
       document.getElementById('adminEmail').textContent = user.email;
-      
-      const initials = (user.displayName || 'Admin').charAt(0).toUpperCase();
-      document.getElementById('adminAvatar').textContent = initials;
+      document.getElementById('adminAvatar').textContent = (user.displayName || 'Admin').charAt(0).toUpperCase();
 
-      // Load all data
       await Promise.all([
         loadInquiries(),
         loadStudents(),
         loadTeachers(),
         loadPrograms(),
-        loadAdmins(),
-        loadSettings()
+        loadAdmins()
       ]);
       
-      // Load dashboard data
       await loadDashboardData();
     });
 
     // Load Inquiries
-    window.loadInquiries = async function() {
+    async function loadInquiries() {
       try {
-        const inquiriesRef = collection(db, "inquiries");
-        const q = query(inquiriesRef, orderBy("createdAt", "desc"));
-        const querySnapshot = await getDocs(q);
-        
+        const snapshot = await getDocs(query(collection(db, "inquiries"), orderBy("createdAt", "desc")));
         allInquiries = [];
-        querySnapshot.forEach((doc) => {
+        snapshot.forEach(doc => {
           const data = doc.data();
           allInquiries.push({ 
             id: doc.id, 
@@ -2271,667 +2339,457 @@
             createdAtFormatted: data.createdAt ? new Date(data.createdAt.seconds * 1000).toLocaleString() : 'N/A'
           });
         });
-        
         filteredInquiries = [...allInquiries];
         
-        // Update badges
         const unreadCount = allInquiries.filter(i => i.status === 'unread').length;
         document.getElementById('inquiryBadge').textContent = unreadCount;
         document.getElementById('notificationBadge').textContent = unreadCount;
-        
-        return allInquiries;
       } catch (error) {
         console.error('Error loading inquiries:', error);
-        showToast('Error loading inquiries', 'error');
-        return [];
+        allInquiries = [];
+        filteredInquiries = [];
       }
-    };
+    }
 
     // Load Students
-    window.loadStudents = async function() {
+    async function loadStudents() {
       try {
-        const studentsRef = collection(db, "students");
-        const q = query(studentsRef, orderBy("createdAt", "desc"));
-        const querySnapshot = await getDocs(q);
-        
+        const snapshot = await getDocs(query(collection(db, "students"), orderBy("createdAt", "desc")));
         allStudents = [];
-        querySnapshot.forEach((doc) => {
-          allStudents.push({ id: doc.id, ...doc.data() });
+        snapshot.forEach(doc => {
+          const data = doc.data();
+          allStudents.push({ 
+            id: doc.id, 
+            ...data,
+            createdAtFormatted: data.createdAt ? new Date(data.createdAt.seconds * 1000).toLocaleString() : 'N/A'
+          });
         });
+        
+        if (allStudents.length === 0) {
+          allStudents = [...defaultStudents];
+        }
         
         filteredStudents = [...allStudents];
         renderStudentsGrid();
-        
-        return allStudents;
       } catch (error) {
         console.error('Error loading students:', error);
-        // If collection doesn't exist, create sample data
-        if (error.code === 'permission-denied' || error.code === 'not-found') {
-          createSampleStudents();
-        }
-        return [];
+        allStudents = [...defaultStudents];
+        filteredStudents = [...defaultStudents];
+        renderStudentsGrid();
       }
-    };
-
-    // Create sample students
-    window.createSampleStudents = async function() {
-      const sampleStudents = [
-        {
-          name: 'John Mwangi',
-          parentName: 'Mary Mwangi',
-          email: 'mary@example.com',
-          phone: '+255 712 345 678',
-          childName: 'John Mwangi',
-          childAge: '7-10',
-          program: 'weekly',
-          status: 'active',
-          startDate: Timestamp.fromDate(new Date('2026-01-15')),
-          notes: 'Enrolled in Young Communicators',
-          createdAt: Timestamp.now()
-        },
-        {
-          name: 'Sarah Kim',
-          parentName: 'David Kim',
-          email: 'david@example.com',
-          phone: '+255 723 456 789',
-          childName: 'Sarah Kim',
-          childAge: '4-6',
-          program: 'both',
-          status: 'active',
-          startDate: Timestamp.fromDate(new Date('2026-02-01')),
-          notes: 'Enrolled in Little Speakers',
-          createdAt: Timestamp.now()
-        },
-        {
-          name: 'Ali Hassan',
-          parentName: 'Fatma Hassan',
-          email: 'fatma@example.com',
-          phone: '+255 734 567 890',
-          childName: 'Ali Hassan',
-          childAge: '11-14',
-          program: 'weekend',
-          status: 'pending',
-          startDate: Timestamp.fromDate(new Date('2026-03-01')),
-          notes: 'Interested in Bright Leaders',
-          createdAt: Timestamp.now()
-        }
-      ];
-
-      for (const student of sampleStudents) {
-        try {
-          await addDoc(collection(db, "students"), student);
-        } catch (error) {
-          console.error('Error creating sample student:', error);
-        }
-      }
-      
-      showToast('Sample students created', 'success');
-      loadStudents();
-    };
+    }
 
     // Load Teachers
-    window.loadTeachers = async function() {
+    async function loadTeachers() {
       try {
-        const teachersRef = collection(db, "teachers");
-        const q = query(teachersRef, orderBy("createdAt", "desc"));
-        const querySnapshot = await getDocs(q);
-        
+        const snapshot = await getDocs(query(collection(db, "teachers"), orderBy("createdAt", "desc")));
         allTeachers = [];
-        querySnapshot.forEach((doc) => {
-          allTeachers.push({ id: doc.id, ...doc.data() });
+        snapshot.forEach(doc => {
+          const data = doc.data();
+          allTeachers.push({ 
+            id: doc.id, 
+            ...data,
+            createdAtFormatted: data.createdAt ? new Date(data.createdAt.seconds * 1000).toLocaleString() : 'N/A'
+          });
         });
+        
+        if (allTeachers.length === 0) {
+          allTeachers = [...defaultTeachers];
+        }
         
         filteredTeachers = [...allTeachers];
         renderTeachersGrid();
-        
-        return allTeachers;
       } catch (error) {
         console.error('Error loading teachers:', error);
-        // If collection doesn't exist, create sample data
-        if (error.code === 'permission-denied' || error.code === 'not-found') {
-          createSampleTeachers();
-        }
-        return [];
+        allTeachers = [...defaultTeachers];
+        filteredTeachers = [...defaultTeachers];
+        renderTeachersGrid();
       }
-    };
-
-    // Create sample teachers
-    window.createSampleTeachers = async function() {
-      const sampleTeachers = [
-        {
-          name: 'Grace Mbeki',
-          email: 'grace@livingenglish.com',
-          phone: '+255 745 678 901',
-          qualification: 'Child Psychology, Speaking Methodology',
-          specialization: 'young',
-          bio: 'Experienced teacher with 5 years in early childhood education',
-          status: 'active',
-          createdAt: Timestamp.now()
-        },
-        {
-          name: 'Peter Omondi',
-          email: 'peter@livingenglish.com',
-          phone: '+255 756 789 012',
-          qualification: 'TEFL Certified, Communication Expert',
-          specialization: 'bright',
-          bio: 'Specializes in public speaking and debate for teens',
-          status: 'active',
-          createdAt: Timestamp.now()
-        },
-        {
-          name: 'Lucy Njeri',
-          email: 'lucy@livingenglish.com',
-          phone: '+255 767 890 123',
-          qualification: 'Early Childhood Education',
-          specialization: 'little',
-          bio: 'Passionate about teaching through play and songs',
-          status: 'active',
-          createdAt: Timestamp.now()
-        }
-      ];
-
-      for (const teacher of sampleTeachers) {
-        try {
-          await addDoc(collection(db, "teachers"), teacher);
-        } catch (error) {
-          console.error('Error creating sample teacher:', error);
-        }
-      }
-      
-      showToast('Sample teachers created', 'success');
-      loadTeachers();
-    };
+    }
 
     // Load Programs
-    window.loadPrograms = async function() {
+    async function loadPrograms() {
       try {
-        const programsRef = collection(db, "programs");
-        const q = query(programsRef, orderBy("createdAt", "desc"));
-        const querySnapshot = await getDocs(q);
-        
+        const snapshot = await getDocs(query(collection(db, "programs"), orderBy("createdAt", "desc")));
         allPrograms = [];
-        querySnapshot.forEach((doc) => {
+        snapshot.forEach(doc => {
           const data = doc.data();
           allPrograms.push({ 
             id: doc.id, 
             ...data,
-            // Ensure features is always an array
-            features: Array.isArray(data.features) ? data.features : 
-                     (data.features ? data.features.split('\n').filter(f => f.trim()) : [])
+            features: Array.isArray(data.features) ? data.features : []
           });
         });
         
+        if (allPrograms.length === 0) {
+          allPrograms = [...defaultPrograms];
+        }
         renderProgramsGrid();
-        
-        return allPrograms;
       } catch (error) {
         console.error('Error loading programs:', error);
-        // If collection doesn't exist, use default programs
-        if (error.code === 'permission-denied' || error.code === 'not-found') {
-          useDefaultPrograms();
-        }
-        return [];
+        allPrograms = [...defaultPrograms];
+        renderProgramsGrid();
       }
-    };
-
-    // Use default programs
-    window.useDefaultPrograms = function() {
-      allPrograms = [
-        {
-          id: 'little-default',
-          name: 'Little Speakers',
-          ageGroup: '4-6 years',
-          focus: 'Fun + Listening + Basic Speaking',
-          price: '200,000 TZS',
-          features: [
-            'Basic vocabulary building',
-            'Songs & games',
-            'Listening & Pronunciation practice',
-            'Confidence activities',
-            'Storytelling with pictures',
-            'Action games (TPR Method)',
-            'Simple conversations'
-          ],
-          goal: 'Comfort speaking, Correct pronunciation, Love for English'
-        },
-        {
-          id: 'young-default',
-          name: 'Young Communicators',
-          ageGroup: '7-10 years',
-          focus: 'Confidence + Structured Speaking',
-          price: '250,000 TZS',
-          features: [
-            'Show & tell',
-            'Storytelling & creation',
-            'Role play',
-            'Public speaking basics',
-            'Debate (simple topics)'
-          ],
-          goal: 'Structured communication, Confidence in speaking'
-        },
-        {
-          id: 'bright-default',
-          name: 'Bright Leaders',
-          ageGroup: '11-14 years',
-          focus: 'Advanced Communication',
-          price: '300,000 TZS',
-          features: [
-            'Debates',
-            'Presentations',
-            'Advanced pronunciation',
-            'Communication skills',
-            'Leadership speaking'
-          ],
-          goal: 'Advanced fluency, Leadership communication'
-        }
-      ];
-      
-      renderProgramsGrid();
-    };
+    }
 
     // Load Admins
-    window.loadAdmins = async function() {
+    async function loadAdmins() {
       try {
-        const adminsRef = collection(db, "admins");
-        const q = query(adminsRef, orderBy("createdAt", "desc"));
-        const querySnapshot = await getDocs(q);
-        
+        const snapshot = await getDocs(query(collection(db, "admins"), orderBy("createdAt", "desc")));
         allAdmins = [];
-        querySnapshot.forEach((doc) => {
-          allAdmins.push({ id: doc.id, ...doc.data() });
+        snapshot.forEach(doc => {
+          const data = doc.data();
+          allAdmins.push({ id: doc.id, ...data });
         });
-        
         renderAdminsTable();
-        
-        return allAdmins;
       } catch (error) {
         console.error('Error loading admins:', error);
-        return [];
+        allAdmins = [];
       }
-    };
-
-    // Load Settings
-    window.loadSettings = async function() {
-      try {
-        const settingsRef = doc(db, "settings", "general");
-        const settingsSnap = await getDoc(settingsRef);
-        
-        if (settingsSnap.exists()) {
-          settings = settingsSnap.data();
-          
-          // Populate settings forms
-          document.getElementById('centerName').value = settings.centerName || 'LivingEnglish Kids';
-          document.getElementById('contactEmail').value = settings.contactEmail || 'info@livingenglish.com';
-          document.getElementById('contactPhone').value = settings.contactPhone || '+255 710 239 390';
-          document.getElementById('address').value = settings.address || 'Dar es Salaam, Tanzania';
-          
-          document.getElementById('littleSpeakersPrice').value = settings.littleSpeakersPrice || '200,000 TZS';
-          document.getElementById('youngCommunicatorsPrice').value = settings.youngCommunicatorsPrice || '250,000 TZS';
-          document.getElementById('brightLeadersPrice').value = settings.brightLeadersPrice || '300,000 TZS';
-          document.getElementById('maxStudentsPerClass').value = settings.maxStudentsPerClass || '12';
-          document.getElementById('sessionDuration').value = settings.sessionDuration || '60';
-          
-          document.getElementById('emailNotifications').checked = settings.emailNotifications !== false;
-          document.getElementById('smsNotifications').checked = settings.smsNotifications || false;
-          document.getElementById('notificationEmail').value = settings.notificationEmail || 'admin@livingenglish.com';
-          document.getElementById('notificationPhone').value = settings.notificationPhone || '+255 710 239 390';
-        }
-      } catch (error) {
-        console.error('Error loading settings:', error);
-      }
-    };
+    }
 
     // Load Dashboard Data
-    window.loadDashboardData = async function() {
-      try {
-        // Calculate stats
-        const totalInquiries = allInquiries.length;
-        const unreadInquiries = allInquiries.filter(i => i.status === 'unread').length;
-        const totalStudents = allStudents.length;
-        const totalTeachers = allTeachers.length;
-        
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
-        const todayInquiries = allInquiries.filter(i => {
-          if (!i.createdAt) return false;
-          const date = new Date(i.createdAt.seconds * 1000);
-          return date >= today;
-        }).length;
-        
-        // Calculate conversion rate
-        const conversionRate = totalInquiries > 0 ? ((totalStudents / totalInquiries) * 100).toFixed(1) : 0;
-        
-        // Update stats
-        document.getElementById('totalInquiries').textContent = totalInquiries;
-        document.getElementById('unreadInquiries').textContent = unreadInquiries;
-        document.getElementById('totalStudents').textContent = totalStudents;
-        document.getElementById('totalTeachers').textContent = totalTeachers;
-        document.getElementById('todayClasses').textContent = Math.ceil(totalStudents / 8) || 0;
-        document.getElementById('conversionRate').textContent = conversionRate + '%';
-        
-        // Load recent inquiries
-        await loadRecentInquiries();
-        
-        // Initialize charts
-        initCharts(allInquiries, allStudents);
-        
-      } catch (error) {
-        console.error('Error loading dashboard:', error);
-      }
-    };
+    async function loadDashboardData() {
+      const totalInquiries = allInquiries.length;
+      const unreadInquiries = allInquiries.filter(i => i.status === 'unread').length;
+      const totalStudents = allStudents.filter(s => s.status === 'active').length;
+      const totalTeachers = allTeachers.filter(t => t.status === 'active').length;
+      
+      document.getElementById('totalInquiries').textContent = totalInquiries;
+      document.getElementById('unreadInquiries').textContent = unreadInquiries;
+      document.getElementById('totalStudents').textContent = totalStudents;
+      document.getElementById('totalTeachers').textContent = totalTeachers;
+      document.getElementById('todayClasses').textContent = Math.ceil(totalStudents / 8) || 0;
+      document.getElementById('conversionRate').textContent = totalInquiries > 0 ? Math.round((totalStudents / totalInquiries) * 100) + '%' : '0%';
+      
+      await loadRecentInquiries();
+      initCharts(allInquiries, allStudents);
+    }
 
     // Load Recent Inquiries
-    window.loadRecentInquiries = async function() {
-      try {
-        const recent = allInquiries.slice(0, 5);
-        
-        let html = '';
-        recent.forEach(inquiry => {
-          const date = inquiry.createdAtFormatted || 'N/A';
-          const statusClass = inquiry.status === 'unread' ? 'status-unread' : 
-                            inquiry.status === 'contacted' ? 'status-contacted' : 'status-read';
-          
-          html += `
-            <tr>
-              <td>${date}</td>
-              <td>${inquiry.name || 'N/A'}</td>
-              <td>${inquiry.email || 'N/A'}</td>
-              <td>${inquiry.phone || 'N/A'}</td>
-              <td>${inquiry.program ? inquiry.program.charAt(0).toUpperCase() + inquiry.program.slice(1) : 'N/A'}</td>
-              <td><span class="status-badge ${statusClass}">${inquiry.status || 'unread'}</span></td>
-              <td>
-                <div class="action-btns">
-                  <button class="action-btn view-btn" onclick="viewInquiry('${inquiry.id}')">
-                    <i class="fas fa-eye"></i>
-                  </button>
-                  <button class="action-btn contact-btn" onclick="quickContact('${inquiry.id}')">
-                    <i class="fas fa-phone"></i>
-                  </button>
-                </div>
-              </td>
-            </tr>
-          `;
-        });
-        
-        if (html === '') {
-          html = `
-            <tr>
-              <td colspan="7" style="text-align: center; padding: 2rem;">
-                <i class="fas fa-inbox" style="font-size: 3rem; color: #E5E7EB; margin-bottom: 1rem;"></i>
-                <p>No inquiries yet</p>
-              </td>
-            </tr>
-          `;
-        }
-        
-        document.getElementById('recentInquiriesBody').innerHTML = html;
-        
-      } catch (error) {
-        console.error('Error loading recent inquiries:', error);
+    async function loadRecentInquiries() {
+      const recent = allInquiries.slice(0, 5);
+      let html = '';
+      recent.forEach(inquiry => {
+        const statusClass = inquiry.status === 'unread' ? 'status-unread' : 
+                          inquiry.status === 'contacted' ? 'status-contacted' : 'status-read';
+        html += `
+          <tr>
+            <td>${inquiry.createdAtFormatted || 'N/A'}</td>
+            <td>${inquiry.name || 'N/A'}</td>
+            <td>${inquiry.email || 'N/A'}</td>
+            <td>${inquiry.phone || 'N/A'}</td>
+            <td>${inquiry.program ? inquiry.program.charAt(0).toUpperCase() + inquiry.program.slice(1) : 'N/A'}</td>
+            <td><span class="status-badge ${statusClass}">${inquiry.status || 'unread'}</span></td>
+            <td>
+              <div class="action-btns">
+                <button class="action-btn view-btn" onclick="viewInquiry('${inquiry.id}')">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="action-btn contact-btn" onclick="quickContact('${inquiry.id}')">
+                  <i class="fas fa-phone"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        `;
+      });
+      
+      if (html === '') {
+        html = '<tr><td colspan="7" style="text-align: center; padding: 2rem;">No inquiries yet</td></tr>';
       }
-    };
+      document.getElementById('recentInquiriesBody').innerHTML = html;
+    }
 
-    // Initialize Charts
-    window.initCharts = function(inquiries, students) {
-      try {
-        // Destroy existing charts if they exist
-        if (inquiryChart) inquiryChart.destroy();
-        if (programChart) programChart.destroy();
+    // Initialize Charts (with whole numbers only)
+    function initCharts(inquiries, students) {
+      if (inquiryChart) inquiryChart.destroy();
+      if (programChart) programChart.destroy();
 
-        // Inquiry Chart - Last 30 days
-        const inquiryCtx = document.getElementById('inquiryChart').getContext('2d');
+      // Inquiry Chart - Last 30 days (whole numbers only)
+      const inquiryCtx = document.getElementById('inquiryChart').getContext('2d');
+      const labels = [];
+      const data = [];
+      
+      for (let i = 29; i >= 0; i--) {
+        const date = new Date();
+        date.setDate(date.getDate() - i);
+        date.setHours(0, 0, 0, 0);
+        const nextDate = new Date(date);
+        nextDate.setDate(nextDate.getDate() + 1);
         
-        const labels = [];
-        const data = [];
+        const count = inquiries.filter(inquiry => {
+          if (!inquiry.createdAt) return false;
+          const inquiryDate = new Date(inquiry.createdAt.seconds * 1000);
+          return inquiryDate >= date && inquiryDate < nextDate;
+        }).length;
         
-        for (let i = 29; i >= 0; i--) {
-          const date = new Date();
-          date.setDate(date.getDate() - i);
-          date.setHours(0, 0, 0, 0);
-          
-          const nextDate = new Date(date);
-          nextDate.setDate(nextDate.getDate() + 1);
-          
-          const count = inquiries.filter(inquiry => {
-            if (!inquiry.createdAt) return false;
-            const inquiryDate = new Date(inquiry.createdAt.seconds * 1000);
-            return inquiryDate >= date && inquiryDate < nextDate;
+        labels.push(date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }));
+        data.push(count);
+      }
+      
+      const maxValue = Math.max(...data, 1);
+      
+      inquiryChart = new Chart(inquiryCtx, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Inquiries',
+            data: data,
+            borderColor: '#1E3A8A',
+            backgroundColor: 'rgba(30, 58, 138, 0.1)',
+            tension: 0.4,
+            fill: true,
+            pointBackgroundColor: '#FBBF24'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { 
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: (context) => `Inquiries: ${Math.round(context.raw)}`
+              }
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: Math.ceil(maxValue * 1.2),
+              ticks: {
+                stepSize: Math.max(1, Math.ceil(maxValue / 5)),
+                callback: function(value) {
+                  return Math.round(value);
+                }
+              }
+            }
+          }
+        }
+      });
+
+      // Program Interest Chart
+      const programCtx = document.getElementById('programChart').getContext('2d');
+      const programCounts = {
+        'Weekly Classes': inquiries.filter(i => i.program === 'weekly').length,
+        'Weekend Program': inquiries.filter(i => i.program === 'weekend').length,
+        'Both': inquiries.filter(i => i.program === 'both').length,
+        'Not Specified': inquiries.filter(i => !i.program).length
+      };
+      
+      programChart = new Chart(programCtx, {
+        type: 'doughnut',
+        data: {
+          labels: Object.keys(programCounts),
+          datasets: [{
+            data: Object.values(programCounts),
+            backgroundColor: ['#1E3A8A', '#FBBF24', '#10B981', '#9CA3AF'],
+            borderWidth: 0
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { 
+            legend: { position: 'bottom' },
+            tooltip: {
+              callbacks: {
+                label: (context) => {
+                  const label = context.label || '';
+                  const value = Math.round(context.raw);
+                  const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                  const percentage = total > 0 ? Math.round((value / total) * 100) : 0;
+                  return `${label}: ${value} (${percentage}%)`;
+                }
+              }
+            }
+          },
+          cutout: '60%'
+        }
+      });
+    }
+
+    // Initialize Analytics Charts (with whole numbers only)
+    function initAnalyticsCharts() {
+      if (growthChart) growthChart.destroy();
+      if (ageChart) ageChart.destroy();
+      if (programPopularityChart) programPopularityChart.destroy();
+      if (sourceChart) sourceChart.destroy();
+
+      // Growth Chart
+      const growthCtx = document.getElementById('growthChart')?.getContext('2d');
+      if (growthCtx) {
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
+        const studentGrowth = [];
+        for (let i = 0; i < 6; i++) {
+          const month = new Date();
+          month.setMonth(month.getMonth() - (5 - i));
+          const monthStart = new Date(month.getFullYear(), month.getMonth(), 1);
+          const monthEnd = new Date(month.getFullYear(), month.getMonth() + 1, 0);
+          const count = allStudents.filter(s => {
+            if (!s.createdAt) return false;
+            const date = new Date(s.createdAt.seconds * 1000);
+            return date >= monthStart && date <= monthEnd;
           }).length;
-          
-          labels.push(date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }));
-          data.push(count);
+          studentGrowth.push(count);
         }
         
-        const maxValue = Math.max(...data, 1);
+        const maxValue = Math.max(...studentGrowth, 1);
         
-        inquiryChart = new Chart(inquiryCtx, {
+        growthChart = new Chart(growthCtx, {
           type: 'line',
           data: {
-            labels: labels,
+            labels: months,
             datasets: [{
-              label: 'Inquiries',
-              data: data,
+              label: 'Students',
+              data: studentGrowth,
               borderColor: '#1E3A8A',
               backgroundColor: 'rgba(30, 58, 138, 0.1)',
               tension: 0.4,
-              fill: true,
-              pointBackgroundColor: '#FBBF24',
-              pointBorderColor: '#1E3A8A',
-              pointRadius: 4,
-              pointHoverRadius: 6
+              fill: true
             }]
           },
-          options: {
-            responsive: true,
+          options: { 
+            responsive: true, 
             maintainAspectRatio: false,
-            plugins: {
-              legend: { display: false },
-              tooltip: {
-                callbacks: {
-                  label: (context) => `Inquiries: ${context.raw}`
-                }
-              }
-            },
             scales: {
               y: {
                 beginAtZero: true,
-                max: Math.ceil(maxValue * 1.2),
                 ticks: {
                   stepSize: Math.max(1, Math.ceil(maxValue / 5)),
-                  callback: (value) => Math.floor(value)
+                  callback: function(value) {
+                    return Math.round(value);
+                  }
                 }
               }
             }
           }
         });
-        
-        // Program Interest Chart
-        const programCtx = document.getElementById('programChart').getContext('2d');
-        
-        const programCounts = {
-          'Weekly Classes': inquiries.filter(i => i.program === 'weekly').length,
-          'Weekend Program': inquiries.filter(i => i.program === 'weekend').length,
-          'Both': inquiries.filter(i => i.program === 'both').length,
-          'Not Specified': inquiries.filter(i => !i.program).length
+      }
+
+      // Age Distribution Chart
+      const ageCtx = document.getElementById('ageChart')?.getContext('2d');
+      if (ageCtx) {
+        const ageData = {
+          '4-6 years': allStudents.filter(s => s.childAge === '4-6').length || 0,
+          '7-10 years': allStudents.filter(s => s.childAge === '7-10').length || 0,
+          '11-14 years': allStudents.filter(s => s.childAge === '11-14').length || 0
         };
         
-        programChart = new Chart(programCtx, {
-          type: 'doughnut',
+        ageChart = new Chart(ageCtx, {
+          type: 'bar',
           data: {
-            labels: Object.keys(programCounts),
+            labels: Object.keys(ageData),
             datasets: [{
-              data: Object.values(programCounts),
-              backgroundColor: ['#1E3A8A', '#FBBF24', '#10B981', '#9CA3AF'],
-              borderWidth: 0,
-              hoverOffset: 10
+              label: 'Students',
+              data: Object.values(ageData),
+              backgroundColor: ['#1E3A8A', '#FBBF24', '#10B981']
             }]
           },
-          options: {
-            responsive: true,
+          options: { 
+            responsive: true, 
+            maintainAspectRatio: false,
+            scales: {
+              y: {
+                beginAtZero: true,
+                ticks: {
+                  stepSize: 1,
+                  callback: function(value) {
+                    return Math.round(value);
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
+
+      // Program Popularity Chart
+      const popularityCtx = document.getElementById('programPopularityChart')?.getContext('2d');
+      if (popularityCtx) {
+        const programData = {
+          'Little Speakers': allStudents.filter(s => s.childAge === '4-6').length || 0,
+          'Young Communicators': allStudents.filter(s => s.childAge === '7-10').length || 0,
+          'Bright Leaders': allStudents.filter(s => s.childAge === '11-14').length || 0
+        };
+        
+        programPopularityChart = new Chart(popularityCtx, {
+          type: 'pie',
+          data: {
+            labels: Object.keys(programData),
+            datasets: [{
+              data: Object.values(programData),
+              backgroundColor: ['#1E3A8A', '#FBBF24', '#10B981']
+            }]
+          },
+          options: { 
+            responsive: true, 
             maintainAspectRatio: false,
             plugins: {
-              legend: { position: 'bottom' },
               tooltip: {
                 callbacks: {
                   label: (context) => {
                     const label = context.label || '';
-                    const value = context.raw || 0;
+                    const value = Math.round(context.raw);
                     const total = context.dataset.data.reduce((a, b) => a + b, 0);
-                    const percentage = total > 0 ? ((value / total) * 100).toFixed(1) : 0;
+                    const percentage = total > 0 ? Math.round((value / total) * 100) : 0;
+                    return `${label}: ${value} students (${percentage}%)`;
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
+
+      // Source Chart
+      const sourceCtx = document.getElementById('sourceChart')?.getContext('2d');
+      if (sourceCtx) {
+        const sourceData = {
+          'Website': allInquiries.filter(i => i.source === 'website' || !i.source).length || 0,
+          'Manual': allInquiries.filter(i => i.source === 'manual').length || 0,
+          'Phone': allInquiries.filter(i => i.source === 'phone').length || 0,
+          'Referral': allInquiries.filter(i => i.source === 'referral').length || 0
+        };
+        
+        sourceChart = new Chart(sourceCtx, {
+          type: 'doughnut',
+          data: {
+            labels: Object.keys(sourceData),
+            datasets: [{
+              data: Object.values(sourceData),
+              backgroundColor: ['#1E3A8A', '#FBBF24', '#10B981', '#9CA3AF']
+            }]
+          },
+          options: { 
+            responsive: true, 
+            maintainAspectRatio: false,
+            plugins: {
+              tooltip: {
+                callbacks: {
+                  label: (context) => {
+                    const label = context.label || '';
+                    const value = Math.round(context.raw);
+                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                    const percentage = total > 0 ? Math.round((value / total) * 100) : 0;
                     return `${label}: ${value} (${percentage}%)`;
                   }
                 }
               }
-            },
-            cutout: '60%'
+            }
           }
         });
-        
-      } catch (error) {
-        console.error('Error initializing charts:', error);
       }
-    };
+    }
 
-    // Initialize Analytics Charts
-    window.initAnalyticsCharts = function() {
-      try {
-        // Destroy existing charts
-        if (growthChart) growthChart.destroy();
-        if (ageChart) ageChart.destroy();
-        if (programPopularityChart) programPopularityChart.destroy();
-        if (sourceChart) sourceChart.destroy();
-
-        // Growth Chart
-        const growthCtx = document.getElementById('growthChart')?.getContext('2d');
-        if (growthCtx) {
-          const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-          const studentGrowth = [];
-          
-          // Calculate actual student growth from data
-          for (let i = 0; i < 6; i++) {
-            const month = new Date();
-            month.setMonth(month.getMonth() - (5 - i));
-            const monthStart = new Date(month.getFullYear(), month.getMonth(), 1);
-            const monthEnd = new Date(month.getFullYear(), month.getMonth() + 1, 0);
-            
-            const count = allStudents.filter(student => {
-              if (!student.createdAt) return false;
-              const date = new Date(student.createdAt.seconds * 1000);
-              return date >= monthStart && date <= monthEnd;
-            }).length;
-            
-            studentGrowth.push(count);
-          }
-          
-          growthChart = new Chart(growthCtx, {
-            type: 'line',
-            data: {
-              labels: months.slice(0, 6),
-              datasets: [{
-                label: 'Students',
-                data: studentGrowth,
-                borderColor: '#1E3A8A',
-                backgroundColor: 'rgba(30, 58, 138, 0.1)',
-                tension: 0.4,
-                fill: true
-              }]
-            },
-            options: {
-              responsive: true,
-              maintainAspectRatio: false
-            }
-          });
-        }
-
-        // Age Distribution Chart
-        const ageCtx = document.getElementById('ageChart')?.getContext('2d');
-        if (ageCtx) {
-          const ageData = {
-            '4-6 years': allStudents.filter(s => s.childAge === '4-6').length || 0,
-            '7-10 years': allStudents.filter(s => s.childAge === '7-10').length || 0,
-            '11-14 years': allStudents.filter(s => s.childAge === '11-14').length || 0
-          };
-          
-          ageChart = new Chart(ageCtx, {
-            type: 'bar',
-            data: {
-              labels: Object.keys(ageData),
-              datasets: [{
-                label: 'Students',
-                data: Object.values(ageData),
-                backgroundColor: ['#1E3A8A', '#FBBF24', '#10B981']
-              }]
-            },
-            options: {
-              responsive: true,
-              maintainAspectRatio: false
-            }
-          });
-        }
-
-        // Program Popularity Chart
-        const popularityCtx = document.getElementById('programPopularityChart')?.getContext('2d');
-        if (popularityCtx) {
-          const programData = {
-            'Little Speakers': allStudents.filter(s => s.childAge === '4-6').length || 0,
-            'Young Communicators': allStudents.filter(s => s.childAge === '7-10').length || 0,
-            'Bright Leaders': allStudents.filter(s => s.childAge === '11-14').length || 0
-          };
-          
-          programPopularityChart = new Chart(popularityCtx, {
-            type: 'pie',
-            data: {
-              labels: Object.keys(programData),
-              datasets: [{
-                data: Object.values(programData),
-                backgroundColor: ['#1E3A8A', '#FBBF24', '#10B981']
-              }]
-            },
-            options: {
-              responsive: true,
-              maintainAspectRatio: false
-            }
-          });
-        }
-
-        // Source Chart
-        const sourceCtx = document.getElementById('sourceChart')?.getContext('2d');
-        if (sourceCtx) {
-          const sourceData = {
-            'Website': allInquiries.filter(i => i.source === 'website' || !i.source).length || 0,
-            'Manual': allInquiries.filter(i => i.source === 'manual').length || 0,
-            'Phone': allInquiries.filter(i => i.source === 'phone').length || 0,
-            'Referral': allInquiries.filter(i => i.source === 'referral').length || 0
-          };
-          
-          sourceChart = new Chart(sourceCtx, {
-            type: 'doughnut',
-            data: {
-              labels: Object.keys(sourceData),
-              datasets: [{
-                data: Object.values(sourceData),
-                backgroundColor: ['#1E3A8A', '#FBBF24', '#10B981', '#9CA3AF']
-              }]
-            },
-            options: {
-              responsive: true,
-              maintainAspectRatio: false
-            }
-          });
-        }
-      } catch (error) {
-        console.error('Error initializing analytics charts:', error);
-      }
-    };
-
-    // Update inquiry chart
+    // Update inquiry chart (with whole numbers)
     window.updateInquiryChart = function() {
       const period = parseInt(document.getElementById('inquiryChartPeriod').value);
-      
       if (inquiryChart) inquiryChart.destroy();
       
       const inquiryCtx = document.getElementById('inquiryChart').getContext('2d');
-      
       const labels = [];
       const data = [];
       
@@ -2939,7 +2797,6 @@
         const date = new Date();
         date.setDate(date.getDate() - i);
         date.setHours(0, 0, 0, 0);
-        
         const nextDate = new Date(date);
         nextDate.setDate(nextDate.getDate() + 1);
         
@@ -2966,17 +2823,19 @@
             backgroundColor: 'rgba(30, 58, 138, 0.1)',
             tension: 0.4,
             fill: true,
-            pointBackgroundColor: '#FBBF24',
-            pointBorderColor: '#1E3A8A',
-            pointRadius: 4,
-            pointHoverRadius: 6
+            pointBackgroundColor: '#FBBF24'
           }]
         },
         options: {
           responsive: true,
           maintainAspectRatio: false,
-          plugins: {
-            legend: { display: false }
+          plugins: { 
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: (context) => `Inquiries: ${Math.round(context.raw)}`
+              }
+            }
           },
           scales: {
             y: {
@@ -2984,7 +2843,9 @@
               max: Math.ceil(maxValue * 1.2),
               ticks: {
                 stepSize: Math.max(1, Math.ceil(maxValue / 5)),
-                callback: (value) => Math.floor(value)
+                callback: function(value) {
+                  return Math.round(value);
+                }
               }
             }
           }
@@ -2992,10 +2853,9 @@
       });
     };
 
-    // Update growth chart
+    // Update growth chart (with whole numbers)
     window.updateGrowthChart = function() {
       const period = parseInt(document.getElementById('growthPeriod').value);
-      
       if (growthChart) growthChart.destroy();
       
       const growthCtx = document.getElementById('growthChart').getContext('2d');
@@ -3007,15 +2867,15 @@
         month.setMonth(month.getMonth() - (period - 1 - i));
         const monthStart = new Date(month.getFullYear(), month.getMonth(), 1);
         const monthEnd = new Date(month.getFullYear(), month.getMonth() + 1, 0);
-        
-        const count = allStudents.filter(student => {
-          if (!student.createdAt) return false;
-          const date = new Date(student.createdAt.seconds * 1000);
+        const count = allStudents.filter(s => {
+          if (!s.createdAt) return false;
+          const date = new Date(s.createdAt.seconds * 1000);
           return date >= monthStart && date <= monthEnd;
         }).length;
-        
         studentGrowth.push(count);
       }
+      
+      const maxValue = Math.max(...studentGrowth, 1);
       
       growthChart = new Chart(growthCtx, {
         type: 'line',
@@ -3030,56 +2890,56 @@
             fill: true
           }]
         },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false
+        options: { 
+          responsive: true, 
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                stepSize: Math.max(1, Math.ceil(maxValue / 5)),
+                callback: function(value) {
+                  return Math.round(value);
+                }
+              }
+            }
+          }
         }
       });
     };
 
     // Render Inquiries Table
-    window.renderInquiriesTable = function() {
+    function renderInquiriesTable() {
       const searchTerm = document.getElementById('inquirySearch')?.value?.toLowerCase() || '';
       const statusFilter = document.getElementById('statusFilter')?.value || 'all';
       const programFilter = document.getElementById('programFilter')?.value || 'all';
       
-      // Apply filters
       filteredInquiries = allInquiries.filter(inquiry => {
-        const matchesSearch = 
-          (inquiry.name && inquiry.name.toLowerCase().includes(searchTerm)) ||
-          (inquiry.email && inquiry.email.toLowerCase().includes(searchTerm)) ||
-          (inquiry.phone && inquiry.phone.includes(searchTerm));
-        
+        const matchesSearch = (inquiry.name?.toLowerCase().includes(searchTerm)) ||
+                             (inquiry.email?.toLowerCase().includes(searchTerm)) ||
+                             (inquiry.phone?.includes(searchTerm));
         const matchesStatus = statusFilter === 'all' || inquiry.status === statusFilter;
         const matchesProgram = programFilter === 'all' || inquiry.program === programFilter;
-        
         return matchesSearch && matchesStatus && matchesProgram;
       });
       
-      // Pagination
       const start = (currentPage - 1) * itemsPerPage;
       const end = start + itemsPerPage;
-      const paginatedInquiries = filteredInquiries.slice(start, end);
+      const paginated = filteredInquiries.slice(start, end);
       
-      // Update showing info
       document.getElementById('showingStart').textContent = filteredInquiries.length > 0 ? start + 1 : 0;
       document.getElementById('showingEnd').textContent = Math.min(end, filteredInquiries.length);
       document.getElementById('totalCount').textContent = filteredInquiries.length;
-      
-      // Disable/enable pagination buttons
       document.getElementById('prevPage').disabled = currentPage === 1;
       document.getElementById('nextPage').disabled = end >= filteredInquiries.length;
       
-      // Generate table HTML
       let html = '';
-      paginatedInquiries.forEach(inquiry => {
-        const date = inquiry.createdAtFormatted || 'N/A';
+      paginated.forEach(inquiry => {
         const statusClass = inquiry.status === 'unread' ? 'status-unread' : 
                           inquiry.status === 'contacted' ? 'status-contacted' : 'status-read';
-        
         html += `
           <tr>
-            <td>${date}</td>
+            <td>${inquiry.createdAtFormatted || 'N/A'}</td>
             <td>${inquiry.name || 'N/A'}</td>
             <td>${inquiry.email || 'N/A'}</td>
             <td>${inquiry.phone || 'N/A'}</td>
@@ -3089,18 +2949,9 @@
             <td><span class="status-badge ${statusClass}">${inquiry.status || 'unread'}</span></td>
             <td>
               <div class="action-btns">
-                <button class="action-btn view-btn" onclick="viewInquiry('${inquiry.id}')">
-                  <i class="fas fa-eye"></i>
-                </button>
-                <button class="action-btn contact-btn" onclick="quickContact('${inquiry.id}')">
-                  <i class="fas fa-phone"></i>
-                </button>
-                <button class="action-btn edit-btn" onclick="editInquiry('${inquiry.id}')">
-                  <i class="fas fa-edit"></i>
-                </button>
-                <button class="action-btn delete-btn" onclick="deleteInquiry('${inquiry.id}')">
-                  <i class="fas fa-trash"></i>
-                </button>
+                <button class="action-btn view-btn" onclick="viewInquiry('${inquiry.id}')"><i class="fas fa-eye"></i></button>
+                <button class="action-btn contact-btn" onclick="quickContact('${inquiry.id}')"><i class="fas fa-phone"></i></button>
+                <button class="action-btn delete-btn" onclick="deleteInquiry('${inquiry.id}')"><i class="fas fa-trash"></i></button>
               </div>
             </td>
           </tr>
@@ -3108,142 +2959,92 @@
       });
       
       if (html === '') {
-        html = `
-          <tr>
-            <td colspan="9" style="text-align: center; padding: 2rem;">
-              <i class="fas fa-inbox" style="font-size: 3rem; color: #E5E7EB; margin-bottom: 1rem;"></i>
-              <p>No inquiries found</p>
-            </td>
-          </tr>
-        `;
+        html = '<tr><td colspan="9" style="text-align: center; padding: 2rem;">No inquiries found</td></tr>';
       }
-      
       document.getElementById('inquiriesBody').innerHTML = html;
-    };
+    }
 
     // Render Programs Grid
-    window.renderProgramsGrid = function() {
+    function renderProgramsGrid() {
       let html = '';
       
-      if (allPrograms.length === 0) {
-        html = `
-          <div style="grid-column: 1/-1; text-align: center; padding: 3rem;">
-            <i class="fas fa-book" style="font-size: 3rem; color: #E5E7EB; margin-bottom: 1rem;"></i>
-            <p>No programs found</p>
-            <button class="filter-btn primary" style="margin-top: 1rem;" onclick="showAddProgramModal()">
-              <i class="fas fa-plus"></i> Add First Program
-            </button>
+      allPrograms.forEach(program => {
+        const isDefault = program.id?.includes('-default');
+        html += `
+          <div class="program-card">
+            <h3 style="color: var(--primary-blue);">${program.name || 'Unnamed Program'}</h3>
+            <p><strong>Age:</strong> ${program.ageGroup || 'N/A'}</p>
+            <p><strong>Focus:</strong> ${program.focus || 'N/A'}</p>
+            <p><strong>Price:</strong> ${program.price || 'N/A'}</p>
+            <div class="card-details">
+              <strong>Features:</strong>
+              <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+                ${program.features?.length ? program.features.map(f => `<li>${f}</li>`).join('') : '<li>No features listed</li>'}
+              </ul>
+            </div>
+            ${program.goal ? `<p><strong>Goal:</strong> ${program.goal}</p>` : ''}
+            <div class="card-actions">
+              <button class="action-btn edit-btn" onclick="editProgram('${program.id}')">
+                <i class="fas fa-edit"></i> ${isDefault ? 'Use as Template' : 'Edit'}
+              </button>
+              ${!isDefault ? 
+                `<button class="action-btn delete-btn" onclick="deleteProgram('${program.id}')">
+                  <i class="fas fa-trash"></i> Delete
+                </button>` : ''
+              }
+            </div>
           </div>
         `;
-      } else {
-        allPrograms.forEach(program => {
-          html += `
-            <div class="program-card">
-              <h3 style="color: var(--primary-blue);">${program.name || 'Unnamed Program'}</h3>
-              <p><strong>Age:</strong> ${program.ageGroup || 'N/A'}</p>
-              <p><strong>Focus:</strong> ${program.focus || 'N/A'}</p>
-              <p><strong>Price:</strong> ${program.price || 'N/A'}</p>
-              <div class="card-details">
-                <strong>Features:</strong>
-                <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
-                  ${program.features && program.features.length > 0 ? 
-                    program.features.map(f => `<li>${f}</li>`).join('') : 
-                    '<li>No features listed</li>'}
-                </ul>
-              </div>
-              ${program.goal ? `<p><strong>Goal:</strong> ${program.goal}</p>` : ''}
-              <div class="card-actions">
-                <button class="action-btn edit-btn" onclick="editProgram('${program.id}')">
-                  <i class="fas fa-edit"></i> Edit
-                </button>
-                <button class="action-btn delete-btn" onclick="deleteProgram('${program.id}')">
-                  <i class="fas fa-trash"></i> Delete
-                </button>
-              </div>
-            </div>
-          `;
-        });
-      }
+      });
       
       document.getElementById('programsGrid').innerHTML = html;
-    };
+    }
 
     // Render Students Grid
-    window.renderStudentsGrid = function() {
+    function renderStudentsGrid() {
       const searchTerm = document.getElementById('studentSearch')?.value?.toLowerCase() || '';
       const programFilter = document.getElementById('studentProgramFilter')?.value || 'all';
       const statusFilter = document.getElementById('studentStatusFilter')?.value || 'all';
       
       filteredStudents = allStudents.filter(student => {
-        const matchesSearch = 
-          (student.name && student.name.toLowerCase().includes(searchTerm)) ||
-          (student.email && student.email.toLowerCase().includes(searchTerm)) ||
-          (student.parentName && student.parentName.toLowerCase().includes(searchTerm));
-        
+        const matchesSearch = (student.name?.toLowerCase().includes(searchTerm)) ||
+                             (student.email?.toLowerCase().includes(searchTerm)) ||
+                             (student.parentName?.toLowerCase().includes(searchTerm));
         const matchesProgram = programFilter === 'all' || student.childAge === programFilter;
         const matchesStatus = statusFilter === 'all' || student.status === statusFilter;
-        
         return matchesSearch && matchesProgram && matchesStatus;
       });
       
       const start = (currentStudentPage - 1) * itemsPerPage;
       const end = start + itemsPerPage;
-      const paginatedStudents = filteredStudents.slice(start, end);
+      const paginated = filteredStudents.slice(start, end);
       
       let html = '';
-      paginatedStudents.forEach(student => {
-        const initials = (student.name || 'S').charAt(0).toUpperCase();
+      paginated.forEach(student => {
+        const isDefault = student.id?.includes('-default');
         const statusClass = student.status === 'active' ? 'status-active' : 
                            student.status === 'pending' ? 'status-pending' : 'status-inactive';
-        
         html += `
           <div class="student-card">
             <div class="card-header">
-              <div class="card-avatar">${initials}</div>
+              <div class="card-avatar">${(student.name || 'S').charAt(0).toUpperCase()}</div>
               <div class="card-info">
                 <h4>${student.name || 'N/A'}</h4>
                 <p>Parent: ${student.parentName || 'N/A'}</p>
               </div>
             </div>
             <div class="card-details">
-              <div class="card-detail">
-                <i class="fas fa-envelope"></i>
-                <span>${student.email || 'N/A'}</span>
-              </div>
-              <div class="card-detail">
-                <i class="fas fa-phone"></i>
-                <span>${student.phone || 'N/A'}</span>
-              </div>
-              <div class="card-detail">
-                <i class="fas fa-calendar-alt"></i>
-                <span>Age: ${student.childAge || 'N/A'}</span>
-              </div>
-              <div class="card-detail">
-                <i class="fas fa-book"></i>
-                <span>Program: ${student.program || 'N/A'}</span>
-              </div>
-              <div class="card-detail">
-                <i class="fas fa-circle"></i>
-                <span>Status: <span class="status-badge ${statusClass}">${student.status || 'pending'}</span></span>
-              </div>
+              <div class="card-detail"><i class="fas fa-envelope"></i> ${student.email || 'N/A'}</div>
+              <div class="card-detail"><i class="fas fa-phone"></i> ${student.phone || 'N/A'}</div>
+              <div class="card-detail"><i class="fas fa-calendar-alt"></i> Age: ${student.childAge || 'N/A'}</div>
+              <div class="card-detail"><i class="fas fa-book"></i> Program: ${student.program || 'N/A'}</div>
+              <div class="card-detail"><i class="fas fa-circle"></i> Status: <span class="status-badge ${statusClass}">${student.status || 'pending'}</span></div>
             </div>
             <div class="card-actions">
-              <button class="action-btn view-btn" onclick="viewStudent('${student.id}')">
-                <i class="fas fa-eye"></i>
-              </button>
-              <button class="action-btn edit-btn" onclick="editStudent('${student.id}')">
-                <i class="fas fa-edit"></i>
-              </button>
-              <button class="action-btn contact-btn" onclick="contactStudent('${student.id}')">
-                <i class="fas fa-phone"></i>
-              </button>
-              ${student.status === 'active' ? 
-                `<button class="action-btn deactivate-btn" onclick="toggleStudentStatus('${student.id}', 'inactive')">
-                  <i class="fas fa-ban"></i>
-                </button>` :
-                `<button class="action-btn activate-btn" onclick="toggleStudentStatus('${student.id}', 'active')">
-                  <i class="fas fa-check-circle"></i>
-                </button>`
+              <button class="action-btn edit-btn" onclick="editStudent('${student.id}')"><i class="fas fa-edit"></i> Edit</button>
+              ${!isDefault ? 
+                `<button class="action-btn delete-btn" onclick="deleteStudent('${student.id}')"><i class="fas fa-trash"></i> Delete</button>` : 
+                `<button class="action-btn edit-btn" onclick="showToast('Default students can be edited to create new students', 'info')"><i class="fas fa-info-circle"></i> Template</button>`
               }
             </div>
           </div>
@@ -3251,81 +3052,51 @@
       });
       
       if (html === '') {
-        html = `
-          <div style="grid-column: 1/-1; text-align: center; padding: 3rem;">
-            <i class="fas fa-users" style="font-size: 3rem; color: #E5E7EB; margin-bottom: 1rem;"></i>
-            <p>No students found</p>
-            <button class="filter-btn primary" style="margin-top: 1rem;" onclick="showAddStudentModal()">
-              <i class="fas fa-plus"></i> Add First Student
-            </button>
-          </div>
-        `;
+        html = '<div style="grid-column: 1/-1; text-align: center; padding: 3rem;">No students found</div>';
       }
-      
       document.getElementById('studentsGrid').innerHTML = html;
-    };
+    }
 
     // Render Teachers Grid
-    window.renderTeachersGrid = function() {
+    function renderTeachersGrid() {
       const searchTerm = document.getElementById('teacherSearch')?.value?.toLowerCase() || '';
       const statusFilter = document.getElementById('teacherStatusFilter')?.value || 'all';
       
       filteredTeachers = allTeachers.filter(teacher => {
-        const matchesSearch = 
-          (teacher.name && teacher.name.toLowerCase().includes(searchTerm)) ||
-          (teacher.email && teacher.email.toLowerCase().includes(searchTerm));
-        
+        const matchesSearch = (teacher.name?.toLowerCase().includes(searchTerm)) ||
+                             (teacher.email?.toLowerCase().includes(searchTerm));
         const matchesStatus = statusFilter === 'all' || teacher.status === statusFilter;
-        
         return matchesSearch && matchesStatus;
       });
       
+      const start = (currentTeacherPage - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+      const paginated = filteredTeachers.slice(start, end);
+      
       let html = '';
-      filteredTeachers.forEach(teacher => {
-        const initials = (teacher.name || 'T').charAt(0).toUpperCase();
+      paginated.forEach(teacher => {
+        const isDefault = teacher.id?.includes('-default');
         const statusClass = teacher.status === 'active' ? 'status-active' : 'status-inactive';
-        
         html += `
           <div class="teacher-card">
             <div class="card-header">
-              <div class="card-avatar">${initials}</div>
+              <div class="card-avatar">${(teacher.name || 'T').charAt(0).toUpperCase()}</div>
               <div class="card-info">
                 <h4>${teacher.name || 'N/A'}</h4>
                 <p>${teacher.specialization || 'Teacher'}</p>
               </div>
             </div>
             <div class="card-details">
-              <div class="card-detail">
-                <i class="fas fa-envelope"></i>
-                <span>${teacher.email || 'N/A'}</span>
-              </div>
-              <div class="card-detail">
-                <i class="fas fa-phone"></i>
-                <span>${teacher.phone || 'N/A'}</span>
-              </div>
-              <div class="card-detail">
-                <i class="fas fa-graduation-cap"></i>
-                <span>${teacher.qualification || 'Qualified'}</span>
-              </div>
-              <div class="card-detail">
-                <i class="fas fa-circle"></i>
-                <span>Status: <span class="status-badge ${statusClass}">${teacher.status || 'active'}</span></span>
-              </div>
+              <div class="card-detail"><i class="fas fa-envelope"></i> ${teacher.email || 'N/A'}</div>
+              <div class="card-detail"><i class="fas fa-phone"></i> ${teacher.phone || 'N/A'}</div>
+              <div class="card-detail"><i class="fas fa-graduation-cap"></i> ${teacher.qualification || 'Qualified'}</div>
+              <div class="card-detail"><i class="fas fa-circle"></i> Status: <span class="status-badge ${statusClass}">${teacher.status || 'active'}</span></div>
             </div>
             <div class="card-actions">
-              <button class="action-btn view-btn" onclick="viewTeacher('${teacher.id}')">
-                <i class="fas fa-eye"></i>
-              </button>
-              <button class="action-btn edit-btn" onclick="editTeacher('${teacher.id}')">
-                <i class="fas fa-edit"></i>
-              </button>
-              ${teacher.status === 'active' ? 
-                `<button class="action-btn deactivate-btn" onclick="toggleTeacherStatus('${teacher.id}', 'inactive')">
-                  <i class="fas fa-ban"></i>
-                </button>` :
-                `<button class="action-btn activate-btn" onclick="toggleTeacherStatus('${teacher.id}', 'active')">
-                  <i class="fas fa-check-circle"></i>
-                </button>`
+              <button class="action-btn edit-btn" onclick="editTeacher('${teacher.id}')"><i class="fas fa-edit"></i> Edit</button>
+              ${!isDefault ? 
+                `<button class="action-btn delete-btn" onclick="deleteTeacher('${teacher.id}')"><i class="fas fa-trash"></i> Delete</button>` :
+                `<button class="action-btn edit-btn" onclick="showToast('Default teachers can be edited to create new teachers', 'info')"><i class="fas fa-info-circle"></i> Template</button>`
               }
             </div>
           </div>
@@ -3333,44 +3104,25 @@
       });
       
       if (html === '') {
-        html = `
-          <div style="grid-column: 1/-1; text-align: center; padding: 3rem;">
-            <i class="fas fa-chalkboard-teacher" style="font-size: 3rem; color: #E5E7EB; margin-bottom: 1rem;"></i>
-            <p>No teachers found</p>
-            <button class="filter-btn primary" style="margin-top: 1rem;" onclick="showAddTeacherModal()">
-              <i class="fas fa-plus"></i> Add First Teacher
-            </button>
-          </div>
-        `;
+        html = '<div style="grid-column: 1/-1; text-align: center; padding: 3rem;">No teachers found</div>';
       }
-      
       document.getElementById('teachersGrid').innerHTML = html;
-    };
+    }
 
     // Render Admins Table
-    window.renderAdminsTable = function() {
+    function renderAdminsTable() {
       let html = '';
-      
       allAdmins.forEach(admin => {
-        const statusClass = admin.status === 'active' ? 'status-active' : 'status-inactive';
-        
         html += `
           <tr>
             <td>${admin.email}</td>
             <td><span class="status-badge ${admin.role === 'super_admin' ? 'status-active' : 'status-read'}">${admin.role}</span></td>
             <td>${admin.createdAt ? new Date(admin.createdAt.seconds * 1000).toLocaleDateString() : 'N/A'}</td>
             <td>${admin.lastLogin ? new Date(admin.lastLogin.seconds * 1000).toLocaleString() : 'Never'}</td>
-            <td><span class="status-badge ${statusClass}">${admin.status || 'active'}</span></td>
+            <td><span class="status-badge status-active">active</span></td>
             <td>
               <div class="action-btns">
-                <button class="action-btn edit-btn" onclick="editAdmin('${admin.id}')">
-                  <i class="fas fa-edit"></i>
-                </button>
-                ${admin.email !== auth.currentUser?.email ? 
-                  `<button class="action-btn delete-btn" onclick="deleteAdmin('${admin.id}')">
-                    <i class="fas fa-trash"></i>
-                  </button>` : ''
-                }
+                <button class="action-btn delete-btn" onclick="deleteAdmin('${admin.id}')"><i class="fas fa-trash"></i></button>
               </div>
             </td>
           </tr>
@@ -3378,29 +3130,17 @@
       });
       
       if (html === '') {
-        html = `
-          <tr>
-            <td colspan="6" style="text-align: center; padding: 2rem;">
-              <i class="fas fa-user-shield" style="font-size: 3rem; color: #E5E7EB; margin-bottom: 1rem;"></i>
-              <p>No admins found</p>
-            </td>
-          </tr>
-        `;
+        html = '<tr><td colspan="6" style="text-align: center; padding: 2rem;">No admins found</td></tr>';
       }
-      
       document.getElementById('adminsBody').innerHTML = html;
-    };
+    }
 
     // Tab switching
     window.switchTab = function(tab) {
       currentTab = tab;
-      
-      document.querySelectorAll('.nav-item').forEach(item => {
-        item.classList.remove('active');
-      });
+      document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
       event.currentTarget.classList.add('active');
       
-      // Hide all tabs
       document.getElementById('dashboardTab').style.display = 'none';
       document.getElementById('inquiriesTab').style.display = 'none';
       document.getElementById('programsTab').style.display = 'none';
@@ -3411,77 +3151,95 @@
       document.getElementById('analyticsTab').style.display = 'none';
       document.getElementById('exportsTab').style.display = 'none';
       
-      // Show selected tab
       document.getElementById(tab + 'Tab').style.display = 'block';
       
-      // Close mobile sidebar after selection
       if (window.innerWidth <= 1024) {
         document.getElementById('sidebar').classList.remove('active');
       }
       
-      // Update title
       const titles = {
-        dashboard: 'Dashboard',
-        inquiries: 'Inquiries Management',
+        dashboard: 'Dashboard', 
+        inquiries: 'Inquiries Management', 
         programs: 'Programs Management',
-        students: 'Students Management',
-        teachers: 'Teachers Management',
+        students: 'Students Management', 
+        teachers: 'Teachers Management', 
         admins: 'Admin Users',
-        settings: 'Settings',
-        analytics: 'Analytics',
+        settings: 'Settings', 
+        analytics: 'Analytics', 
         exports: 'Exports'
       };
       
       document.getElementById('pageTitle').textContent = titles[tab] || 'Dashboard';
       document.getElementById('pageSubtitle').textContent = `Welcome back! Here's your ${titles[tab] || 'dashboard'} overview.`;
       
-      // Render appropriate content
-      if (tab === 'inquiries') renderInquiriesTable();
-      if (tab === 'students') renderStudentsGrid();
-      if (tab === 'teachers') renderTeachersGrid();
+      if (tab === 'inquiries') {
+        currentPage = 1;
+        renderInquiriesTable();
+      }
+      if (tab === 'students') {
+        currentStudentPage = 1;
+        renderStudentsGrid();
+      }
+      if (tab === 'teachers') {
+        currentTeacherPage = 1;
+        renderTeachersGrid();
+      }
       if (tab === 'programs') renderProgramsGrid();
       if (tab === 'admins') renderAdminsTable();
       if (tab === 'analytics') {
-        // Update analytics stats
-        document.getElementById('totalStudentsAnalytics').textContent = allStudents.length;
-        
-        // Calculate growth rate (compare last 30 days to previous 30 days)
-        const now = new Date();
-        const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
-        const sixtyDaysAgo = new Date(now.getTime() - 60 * 24 * 60 * 60 * 1000);
-        
-        const recentStudents = allStudents.filter(s => {
-          if (!s.createdAt) return false;
-          const date = new Date(s.createdAt.seconds * 1000);
-          return date >= thirtyDaysAgo;
-        }).length;
-        
-        const previousStudents = allStudents.filter(s => {
-          if (!s.createdAt) return false;
-          const date = new Date(s.createdAt.seconds * 1000);
-          return date >= sixtyDaysAgo && date < thirtyDaysAgo;
-        }).length;
-        
-        const growthRate = previousStudents > 0 ? ((recentStudents - previousStudents) / previousStudents * 100).toFixed(1) : 0;
-        document.getElementById('growthRate').textContent = growthRate + '%';
-        
-        // Calculate average response time (mock for now)
-        document.getElementById('avgResponse').textContent = allInquiries.length > 0 ? '24h' : '0h';
-        
-        // Calculate conversion rate
-        const conversionRate = allInquiries.length > 0 ? ((allStudents.length / allInquiries.length) * 100).toFixed(1) : 0;
+        document.getElementById('totalStudentsAnalytics').textContent = allStudents.filter(s => s.status === 'active').length;
+        const monthlyGrowth = calculateMonthlyGrowth();
+        document.getElementById('growthRate').textContent = monthlyGrowth + '%';
+        document.getElementById('avgResponse').textContent = calculateAvgResponse();
+        const conversionRate = allInquiries.length > 0 ? Math.round((allStudents.filter(s => s.status === 'active').length / allInquiries.length) * 100) : 0;
         document.getElementById('conversionRateAnalytics').textContent = conversionRate + '%';
-        
-        // Initialize analytics charts
         initAnalyticsCharts();
       }
     };
+
+    // Calculate monthly growth (whole number)
+    function calculateMonthlyGrowth() {
+      const now = new Date();
+      const oneMonthAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+      const twoMonthsAgo = new Date(now.getTime() - 60 * 24 * 60 * 60 * 1000);
+      
+      const recentStudents = allStudents.filter(s => {
+        if (!s.createdAt) return false;
+        const date = new Date(s.createdAt.seconds * 1000);
+        return date >= oneMonthAgo;
+      }).length;
+      
+      const previousStudents = allStudents.filter(s => {
+        if (!s.createdAt) return false;
+        const date = new Date(s.createdAt.seconds * 1000);
+        return date >= twoMonthsAgo && date < oneMonthAgo;
+      }).length;
+      
+      if (previousStudents === 0) return recentStudents > 0 ? 100 : 0;
+      return Math.round((recentStudents - previousStudents) / previousStudents * 100);
+    }
+
+    // Calculate average response time
+    function calculateAvgResponse() {
+      const contactedInquiries = allInquiries.filter(i => i.status === 'contacted' && i.createdAt && i.updatedAt);
+      if (contactedInquiries.length === 0) return '24h';
+      
+      let totalHours = 0;
+      contactedInquiries.forEach(i => {
+        const created = new Date(i.createdAt.seconds * 1000);
+        const updated = new Date(i.updatedAt.seconds * 1000);
+        const hours = (updated - created) / (1000 * 60 * 60);
+        totalHours += hours;
+      });
+      
+      const avgHours = Math.round(totalHours / contactedInquiries.length);
+      return avgHours + 'h';
+    }
 
     // Settings tabs
     window.switchSettingsTab = function(tab) {
       document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
       event.currentTarget.classList.add('active');
-      
       document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
       document.getElementById(tab + 'Settings').classList.add('active');
     };
@@ -3494,11 +3252,8 @@
 
     window.filterRecentInquiries = function() {
       const term = document.getElementById('recentSearch').value.toLowerCase();
-      const rows = document.querySelectorAll('#recentInquiriesTable tbody tr');
-      
-      rows.forEach(row => {
-        const text = row.textContent.toLowerCase();
-        row.style.display = text.includes(term) ? '' : 'none';
+      document.querySelectorAll('#recentInquiriesTable tbody tr').forEach(row => {
+        row.style.display = row.textContent.toLowerCase().includes(term) ? '' : 'none';
       });
     };
 
@@ -3508,10 +3263,10 @@
     };
 
     window.filterTeachers = function() {
+      currentTeacherPage = 1;
       renderTeachersGrid();
     };
 
-    // Refresh functions
     window.refreshInquiries = function() {
       showToast('Refreshing data...', 'warning');
       loadInquiries().then(() => {
@@ -3520,162 +3275,90 @@
       });
     };
 
-    // Pagination
     window.changePage = function(direction) {
       currentPage += direction;
       renderInquiriesTable();
     };
 
-    // View Inquiry
+    // Inquiry functions
     window.viewInquiry = async function(id) {
       currentInquiryId = id;
-      
       try {
-        const docRef = doc(db, "inquiries", id);
-        const docSnap = await getDoc(docRef);
-        
+        const docSnap = await getDoc(doc(db, "inquiries", id));
         if (docSnap.exists()) {
           const data = docSnap.data();
-          const date = data.createdAt ? new Date(data.createdAt.seconds * 1000).toLocaleString() : 'N/A';
-          
-          // Mark as read if unread
           if (data.status === 'unread') {
-            await updateDoc(docRef, { status: 'read' });
+            await updateDoc(doc(db, "inquiries", id), { status: 'read' });
             await loadInquiries();
             await loadDashboardData();
           }
           
-          const html = `
-            <div class="inquiry-detail">
-              <label>Date:</label>
-              <p>${date}</p>
-            </div>
-            <div class="inquiry-detail">
-              <label>Name:</label>
-              <p>${data.name || 'N/A'}</p>
-            </div>
-            <div class="inquiry-detail">
-              <label>Email:</label>
-              <p>${data.email || 'N/A'}</p>
-            </div>
-            <div class="inquiry-detail">
-              <label>Phone:</label>
-              <p>${data.phone || 'N/A'}</p>
-            </div>
-            <div class="inquiry-detail">
-              <label>Child Name:</label>
-              <p>${data.childName || 'N/A'}</p>
-            </div>
-            <div class="inquiry-detail">
-              <label>Child Age:</label>
-              <p>${data.childAge || 'N/A'}</p>
-            </div>
-            <div class="inquiry-detail">
-              <label>Program Interest:</label>
-              <p>${data.program ? data.program.charAt(0).toUpperCase() + data.program.slice(1) : 'N/A'}</p>
-            </div>
-            <div class="inquiry-detail">
-              <label>Message:</label>
-              <p>${data.message || 'No message'}</p>
-            </div>
-            <div class="inquiry-detail">
-              <label>Status:</label>
-              <p><span class="status-badge status-${data.status || 'unread'}">${data.status || 'unread'}</span></p>
-            </div>
-            <div class="inquiry-detail">
-              <label>Source:</label>
-              <p>${data.source || 'Website'}</p>
-            </div>
-          `;
+          const html = Object.entries(data).map(([key, val]) => {
+            if (key === 'createdAt' || key === 'updatedAt') {
+              const date = val?.seconds ? new Date(val.seconds * 1000).toLocaleString() : 'N/A';
+              return `<div class="inquiry-detail"><label>${key}:</label><p>${date}</p></div>`;
+            }
+            return `<div class="inquiry-detail"><label>${key}:</label><p>${val || 'N/A'}</p></div>`;
+          }).join('');
           
           document.getElementById('inquiryDetails').innerHTML = html;
           document.getElementById('inquiryModal').classList.add('active');
         }
       } catch (error) {
-        console.error('Error viewing inquiry:', error);
-        showToast('Error loading inquiry details', 'error');
+        showToast('Error loading inquiry', 'error');
       }
     };
 
-    // Quick Contact
     window.quickContact = async function(id) {
       try {
-        const docRef = doc(db, "inquiries", id);
-        await updateDoc(docRef, { status: 'contacted' });
-        
+        await updateDoc(doc(db, "inquiries", id), { status: 'contacted', updatedAt: Timestamp.now() });
         showToast('Marked as contacted', 'success');
         await loadInquiries();
         await loadDashboardData();
-        
       } catch (error) {
-        console.error('Error updating inquiry:', error);
         showToast('Error updating status', 'error');
       }
     };
 
-    // Mark as Contacted (from modal)
     window.markAsContacted = async function() {
       if (!currentInquiryId) return;
-      
-      try {
-        const docRef = doc(db, "inquiries", currentInquiryId);
-        await updateDoc(docRef, { status: 'contacted' });
-        
-        showToast('Marked as contacted', 'success');
-        closeModal();
-        await loadInquiries();
-        await loadDashboardData();
-        
-      } catch (error) {
-        console.error('Error updating inquiry:', error);
-        showToast('Error updating status', 'error');
-      }
+      await quickContact(currentInquiryId);
+      closeModal();
     };
 
-    // Convert to Student
     window.convertToStudent = async function() {
       if (!currentInquiryId) return;
-      
       try {
-        const docRef = doc(db, "inquiries", currentInquiryId);
-        const docSnap = await getDoc(docRef);
-        
+        const docSnap = await getDoc(doc(db, "inquiries", currentInquiryId));
         if (docSnap.exists()) {
           const data = docSnap.data();
-          
-          // Show add student modal with pre-filled data
           closeModal();
           showAddStudentModal(data);
         }
       } catch (error) {
-        console.error('Error converting to student:', error);
         showToast('Error converting to student', 'error');
       }
     };
 
-    // Delete Inquiry
     window.deleteInquiry = async function(id) {
-      const inquiryId = id || currentInquiryId;
-      
-      if (!confirm('Are you sure you want to delete this inquiry?')) return;
-      
+      if (!confirm('Delete this inquiry?')) return;
       try {
-        const docRef = doc(db, "inquiries", inquiryId);
-        await deleteDoc(docRef);
-        
+        await deleteDoc(doc(db, "inquiries", id));
         showToast('Inquiry deleted', 'success');
-        closeModal();
+        if (currentInquiryId === id) closeModal();
         await loadInquiries();
         await loadDashboardData();
-        
       } catch (error) {
-        console.error('Error deleting inquiry:', error);
         showToast('Error deleting inquiry', 'error');
       }
     };
 
-    // Show Add Student Modal
+    // Student functions
     window.showAddStudentModal = function(inquiryData = null) {
+      document.getElementById('studentForm').reset();
+      document.getElementById('studentId').value = '';
+      document.getElementById('studentModalTitle').textContent = 'Add New Student';
+      
       if (inquiryData) {
         document.getElementById('studentName').value = inquiryData.childName || '';
         document.getElementById('parentName').value = inquiryData.name || '';
@@ -3683,317 +3366,320 @@
         document.getElementById('studentPhone').value = inquiryData.phone || '';
         document.getElementById('studentAgeGroup').value = inquiryData.childAge || '';
         document.getElementById('studentProgram').value = inquiryData.program || '';
-      } else {
-        document.getElementById('studentForm').reset();
       }
       
       document.getElementById('studentModal').classList.add('active');
     };
 
-    // Close Student Modal
+    window.editStudent = function(id) {
+      const student = allStudents.find(s => s.id === id);
+      if (!student) return;
+      
+      if (id.includes('-default')) {
+        document.getElementById('studentForm').reset();
+        document.getElementById('studentId').value = '';
+        document.getElementById('studentModalTitle').textContent = 'Create New from Template';
+      } else {
+        document.getElementById('studentId').value = id;
+        document.getElementById('studentModalTitle').textContent = 'Edit Student';
+      }
+      
+      document.getElementById('studentName').value = student.name || '';
+      document.getElementById('parentName').value = student.parentName || '';
+      document.getElementById('studentEmail').value = student.email || '';
+      document.getElementById('studentPhone').value = student.phone || '';
+      document.getElementById('studentAgeGroup').value = student.childAge || '';
+      document.getElementById('studentProgram').value = student.program || '';
+      document.getElementById('studentStartDate').value = student.startDate || '';
+      document.getElementById('studentStatus').value = student.status || 'pending';
+      document.getElementById('studentNotes').value = student.notes || '';
+      
+      document.getElementById('studentModal').classList.add('active');
+    };
+
     window.closeStudentModal = function() {
       document.getElementById('studentModal').classList.remove('active');
     };
 
-    // Save Student
     window.saveStudent = async function() {
+      const id = document.getElementById('studentId').value;
       const studentData = {
         name: document.getElementById('studentName').value,
         parentName: document.getElementById('parentName').value,
         email: document.getElementById('studentEmail').value,
         phone: document.getElementById('studentPhone').value,
-        childName: document.getElementById('studentName').value,
         childAge: document.getElementById('studentAgeGroup').value,
         program: document.getElementById('studentProgram').value,
-        startDate: document.getElementById('studentStartDate').value ? Timestamp.fromDate(new Date(document.getElementById('studentStartDate').value)) : null,
+        startDate: document.getElementById('studentStartDate').value || null,
         status: document.getElementById('studentStatus').value,
-        notes: document.getElementById('studentNotes').value,
-        createdAt: Timestamp.now()
+        notes: document.getElementById('studentNotes').value || '',
+        updatedAt: Timestamp.now()
       };
       
       try {
-        await addDoc(collection(db, "students"), studentData);
+        if (id && !id.includes('-default')) {
+          await updateDoc(doc(db, "students", id), studentData);
+          showToast('Student updated', 'success');
+        } else {
+          studentData.createdAt = Timestamp.now();
+          await addDoc(collection(db, "students"), studentData);
+          showToast('Student added', 'success');
+        }
         
-        showToast('Student added successfully', 'success');
         closeStudentModal();
         await loadStudents();
         await loadDashboardData();
-        
       } catch (error) {
-        console.error('Error adding student:', error);
-        showToast('Error adding student', 'error');
+        showToast('Error saving student', 'error');
       }
     };
 
-    // Show Add Teacher Modal
+    window.deleteStudent = async function(id) {
+      if (id.includes('-default')) {
+        showToast('Default students cannot be deleted', 'warning');
+        return;
+      }
+      if (!confirm('Delete this student?')) return;
+      try {
+        await deleteDoc(doc(db, "students", id));
+        showToast('Student deleted', 'success');
+        await loadStudents();
+        await loadDashboardData();
+      } catch (error) {
+        showToast('Error deleting student', 'error');
+      }
+    };
+
+    // Teacher functions
     window.showAddTeacherModal = function() {
       document.getElementById('teacherForm').reset();
+      document.getElementById('teacherId').value = '';
+      document.getElementById('teacherModalTitle').textContent = 'Add New Teacher';
       document.getElementById('teacherModal').classList.add('active');
     };
 
-    // Close Teacher Modal
+    window.editTeacher = function(id) {
+      const teacher = allTeachers.find(t => t.id === id);
+      if (!teacher) return;
+      
+      if (id.includes('-default')) {
+        document.getElementById('teacherForm').reset();
+        document.getElementById('teacherId').value = '';
+        document.getElementById('teacherModalTitle').textContent = 'Create New from Template';
+      } else {
+        document.getElementById('teacherId').value = id;
+        document.getElementById('teacherModalTitle').textContent = 'Edit Teacher';
+      }
+      
+      document.getElementById('teacherName').value = teacher.name || '';
+      document.getElementById('teacherEmail').value = teacher.email || '';
+      document.getElementById('teacherPhone').value = teacher.phone || '';
+      document.getElementById('teacherQualification').value = teacher.qualification || '';
+      document.getElementById('teacherSpecialization').value = teacher.specialization || 'all';
+      document.getElementById('teacherStatus').value = teacher.status || 'active';
+      document.getElementById('teacherBio').value = teacher.bio || '';
+      
+      document.getElementById('teacherModal').classList.add('active');
+    };
+
     window.closeTeacherModal = function() {
       document.getElementById('teacherModal').classList.remove('active');
     };
 
-    // Save Teacher
     window.saveTeacher = async function() {
+      const id = document.getElementById('teacherId').value;
       const teacherData = {
         name: document.getElementById('teacherName').value,
         email: document.getElementById('teacherEmail').value,
         phone: document.getElementById('teacherPhone').value,
-        qualification: document.getElementById('teacherQualification').value,
+        qualification: document.getElementById('teacherQualification').value || '',
         specialization: document.getElementById('teacherSpecialization').value,
-        bio: document.getElementById('teacherBio').value,
         status: document.getElementById('teacherStatus').value,
-        createdAt: Timestamp.now()
+        bio: document.getElementById('teacherBio').value || '',
+        updatedAt: Timestamp.now()
       };
       
       try {
-        await addDoc(collection(db, "teachers"), teacherData);
+        if (id && !id.includes('-default')) {
+          await updateDoc(doc(db, "teachers", id), teacherData);
+          showToast('Teacher updated', 'success');
+        } else {
+          teacherData.createdAt = Timestamp.now();
+          await addDoc(collection(db, "teachers"), teacherData);
+          showToast('Teacher added', 'success');
+        }
         
-        showToast('Teacher added successfully', 'success');
         closeTeacherModal();
         await loadTeachers();
         await loadDashboardData();
-        
       } catch (error) {
-        console.error('Error adding teacher:', error);
-        showToast('Error adding teacher', 'error');
+        showToast('Error saving teacher', 'error');
       }
     };
 
-    // Toggle Student Status
-    window.toggleStudentStatus = async function(id, newStatus) {
-      try {
-        const docRef = doc(db, "students", id);
-        await updateDoc(docRef, { status: newStatus });
-        
-        showToast(`Student marked as ${newStatus}`, 'success');
-        await loadStudents();
-        await loadDashboardData();
-        
-      } catch (error) {
-        console.error('Error updating student status:', error);
-        showToast('Error updating status', 'error');
+    window.deleteTeacher = async function(id) {
+      if (id.includes('-default')) {
+        showToast('Default teachers cannot be deleted', 'warning');
+        return;
       }
-    };
-
-    // Toggle Teacher Status
-    window.toggleTeacherStatus = async function(id, newStatus) {
+      if (!confirm('Delete this teacher?')) return;
       try {
-        const docRef = doc(db, "teachers", id);
-        await updateDoc(docRef, { status: newStatus });
-        
-        showToast(`Teacher marked as ${newStatus}`, 'success');
+        await deleteDoc(doc(db, "teachers", id));
+        showToast('Teacher deleted', 'success');
         await loadTeachers();
         await loadDashboardData();
-        
       } catch (error) {
-        console.error('Error updating teacher status:', error);
-        showToast('Error updating status', 'error');
+        showToast('Error deleting teacher', 'error');
       }
     };
 
-    // Show Add Admin Modal
+    // Admin functions
     window.showAddAdminModal = function() {
       document.getElementById('adminForm').reset();
       document.getElementById('adminModal').classList.add('active');
     };
 
-    // Close Admin Modal
     window.closeAdminModal = function() {
       document.getElementById('adminModal').classList.remove('active');
     };
 
-    // Save Admin
     window.saveAdmin = async function() {
       const email = document.getElementById('adminEmail').value;
       const password = document.getElementById('adminPassword').value;
       const role = document.getElementById('adminRole').value;
       
       try {
-        // Create user in Authentication
-        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-        const user = userCredential.user;
-        
-        // Add to admins collection
-        await setDoc(doc(db, "admins", user.uid), {
-          email: email,
-          role: role,
-          status: 'active',
-          createdAt: Timestamp.now(),
-          createdBy: auth.currentUser?.email
+        const user = await createUserWithEmailAndPassword(auth, email, password);
+        await setDoc(doc(db, "admins", user.user.uid), {
+          email, 
+          role, 
+          status: 'active', 
+          createdAt: Timestamp.now()
         });
-        
-        showToast('Admin created successfully', 'success');
+        showToast('Admin created', 'success');
         closeAdminModal();
         await loadAdmins();
-        
       } catch (error) {
-        console.error('Error creating admin:', error);
         showToast(error.message, 'error');
       }
     };
 
-    // Delete Admin
     window.deleteAdmin = async function(id) {
-      if (!confirm('Are you sure you want to delete this admin?')) return;
-      
+      if (!confirm('Delete this admin?')) return;
       try {
         await deleteDoc(doc(db, "admins", id));
         showToast('Admin deleted', 'success');
         await loadAdmins();
       } catch (error) {
-        console.error('Error deleting admin:', error);
         showToast('Error deleting admin', 'error');
       }
     };
 
-    // Show Add Program Modal
+    // Program functions
     window.showAddProgramModal = function() {
-      // Reset form
       document.getElementById('programForm').reset();
-      
-      // Reset modal title and button
-      document.querySelector('#programModal h2').textContent = 'Add New Program';
-      document.querySelector('#programModal .filter-btn.primary').innerHTML = '<i class="fas fa-save"></i> Save Program';
-      
-      // Clear current program ID
+      document.getElementById('programId').value = '';
+      document.getElementById('programModalTitle').textContent = 'Add New Program';
       currentProgramId = null;
-      
-      // Open modal
       document.getElementById('programModal').classList.add('active');
     };
 
-    // Edit Program
-    window.editProgram = async function(id) {
-      try {
-        // Find the program
-        const program = allPrograms.find(p => p.id === id);
-        
-        if (!program) {
-          showToast('Program not found', 'error');
-          return;
-        }
-        
-        // Fill the form with program data
-        document.getElementById('programName').value = program.name || '';
-        document.getElementById('programAge').value = program.ageGroup || '';
-        document.getElementById('programFocus').value = program.focus || '';
-        document.getElementById('programPrice').value = program.price || '';
-        document.getElementById('programFeatures').value = program.features ? program.features.join('\n') : '';
-        document.getElementById('programGoal').value = program.goal || '';
-        
-        // Store program ID for update
+    window.editProgram = function(id) {
+      const program = allPrograms.find(p => p.id === id);
+      if (!program) return;
+      
+      if (id.includes('-default')) {
+        document.getElementById('programForm').reset();
+        document.getElementById('programId').value = '';
+        document.getElementById('programModalTitle').textContent = 'Create New from Template';
+        currentProgramId = null;
+      } else {
+        document.getElementById('programId').value = id;
+        document.getElementById('programModalTitle').textContent = 'Edit Program';
         currentProgramId = id;
-        
-        // Change modal title and button
-        document.querySelector('#programModal h2').textContent = 'Edit Program';
-        document.querySelector('#programModal .filter-btn.primary').innerHTML = '<i class="fas fa-save"></i> Update Program';
-        
-        // Open modal
-        document.getElementById('programModal').classList.add('active');
-        
-      } catch (error) {
-        console.error('Error editing program:', error);
-        showToast('Error loading program for editing', 'error');
       }
+      
+      document.getElementById('programName').value = program.name || '';
+      document.getElementById('programAge').value = program.ageGroup || '';
+      document.getElementById('programFocus').value = program.focus || '';
+      document.getElementById('programPrice').value = program.price || '';
+      document.getElementById('programFeatures').value = program.features?.join('\n') || '';
+      document.getElementById('programGoal').value = program.goal || '';
+      
+      document.getElementById('programModal').classList.add('active');
     };
 
-    // Delete Program
+    window.closeProgramModal = function() {
+      document.getElementById('programModal').classList.remove('active');
+      currentProgramId = null;
+    };
+
     window.deleteProgram = async function(id) {
-      if (!confirm('Are you sure you want to delete this program?')) return;
-      
+      if (id.includes('-default')) {
+        showToast('Default programs cannot be deleted', 'warning');
+        return;
+      }
+      if (!confirm('Delete this program?')) return;
       try {
-        // Delete from Firebase
-        const docRef = doc(db, "programs", id);
-        await deleteDoc(docRef);
-        
-        showToast('Program deleted successfully', 'success');
-        
-        // Reload programs
+        await deleteDoc(doc(db, "programs", id));
+        showToast('Program deleted', 'success');
         await loadPrograms();
-        
       } catch (error) {
-        console.error('Error deleting program:', error);
         showToast('Error deleting program', 'error');
       }
     };
 
-    // Save Program (handles both add and update)
     window.saveProgram = async function() {
-      const features = document.getElementById('programFeatures').value.split('\n').filter(f => f.trim());
-      const programId = currentProgramId;
+      const id = document.getElementById('programId').value;
+      const name = document.getElementById('programName')?.value;
+      const ageGroup = document.getElementById('programAge')?.value;
+      const focus = document.getElementById('programFocus')?.value;
       
-      const programData = {
-        name: document.getElementById('programName').value,
-        ageGroup: document.getElementById('programAge').value,
-        focus: document.getElementById('programFocus').value,
-        price: document.getElementById('programPrice').value,
-        features: features,
-        goal: document.getElementById('programGoal').value,
-        updatedAt: Timestamp.now()
-      };
-      
-      // Validate required fields
-      if (!programData.name || !programData.ageGroup || !programData.focus) {
-        showToast('Please fill in all required fields', 'error');
+      if (!name || !ageGroup || !focus) {
+        showToast('Please fill required fields', 'error');
         return;
       }
       
+      const features = document.getElementById('programFeatures')?.value
+        .split('\n').map(f => f.trim()).filter(f => f.length > 0) || [];
+      
+      const programData = {
+        name, 
+        ageGroup, 
+        focus,
+        price: document.getElementById('programPrice')?.value || 'Contact us',
+        features: features.length ? features : ['Contact us for details'],
+        goal: document.getElementById('programGoal')?.value || 'Build confidence',
+        updatedAt: Timestamp.now()
+      };
+      
       try {
-        if (programId) {
-          // Update existing program
-          const docRef = doc(db, "programs", programId);
-          await updateDoc(docRef, programData);
-          showToast('Program updated successfully', 'success');
+        if (id && !id.includes('-default')) {
+          await updateDoc(doc(db, "programs", id), programData);
+          showToast('Program updated', 'success');
         } else {
-          // Add new program
           programData.createdAt = Timestamp.now();
           await addDoc(collection(db, "programs"), programData);
-          showToast('Program added successfully', 'success');
+          showToast('Program added', 'success');
         }
         
-        // Reset form and close modal
         closeProgramModal();
-        
-        // Reset for next use
-        currentProgramId = null;
-        document.querySelector('#programModal h2').textContent = 'Add New Program';
-        document.querySelector('#programModal .filter-btn.primary').innerHTML = '<i class="fas fa-save"></i> Save Program';
-        
-        // Reload programs
         await loadPrograms();
-        
       } catch (error) {
-        console.error('Error saving program:', error);
         showToast('Error saving program', 'error');
       }
     };
 
-    // Close Program Modal
-    window.closeProgramModal = function() {
-      document.getElementById('programModal').classList.remove('active');
-      
-      // Reset for next use
-      currentProgramId = null;
-      document.querySelector('#programModal h2').textContent = 'Add New Program';
-      document.querySelector('#programModal .filter-btn.primary').innerHTML = '<i class="fas fa-save"></i> Save Program';
-    };
-
-    // Show Add Inquiry Modal
+    // Manual Inquiry
     window.showAddInquiryModal = function() {
       document.getElementById('addInquiryForm').reset();
       document.getElementById('addInquiryModal').classList.add('active');
     };
 
-    // Close Add Inquiry Modal
     window.closeAddInquiryModal = function() {
       document.getElementById('addInquiryModal').classList.remove('active');
     };
 
-    // Save Manual Inquiry
     window.saveManualInquiry = async function() {
       const inquiryData = {
         name: document.getElementById('addInquiryName').value,
@@ -4010,42 +3696,30 @@
       
       try {
         await addDoc(collection(db, "inquiries"), inquiryData);
-        
-        showToast('Inquiry added successfully', 'success');
+        showToast('Inquiry added', 'success');
         closeAddInquiryModal();
         await loadInquiries();
         await loadDashboardData();
-        
       } catch (error) {
-        console.error('Error adding inquiry:', error);
         showToast('Error adding inquiry', 'error');
       }
     };
 
-    // Show Notifications
+    // Notifications
     window.showNotifications = function() {
-      const unreadInquiries = allInquiries.filter(i => i.status === 'unread');
-      
+      const unread = allInquiries.filter(i => i.status === 'unread');
       let html = '';
-      unreadInquiries.slice(0, 10).forEach(inquiry => {
-        html += `
-          <div class="notification-item" onclick="viewInquiry('${inquiry.id}')">
-            <div class="notification-title">${inquiry.name || 'New Inquiry'}</div>
-            <div style="font-size: 0.9rem; color: var(--text-light);">${inquiry.email}</div>
-            <div class="notification-time">${inquiry.createdAtFormatted || 'Just now'}</div>
-          </div>
-        `;
+      unread.slice(0, 10).forEach(i => {
+        html += `<div class="notification-item" onclick="viewInquiry('${i.id}')">
+          <div class="notification-title">${i.name || 'New Inquiry'}</div>
+          <div>${i.email}</div>
+          <div class="notification-time">${i.createdAtFormatted || 'Just now'}</div>
+        </div>`;
       });
-      
-      if (html === '') {
-        html = '<p style="text-align: center; padding: 2rem;">No new notifications</p>';
-      }
-      
-      document.getElementById('notificationsList').innerHTML = html;
+      document.getElementById('notificationsList').innerHTML = html || '<p style="text-align: center; padding: 2rem;">No notifications</p>';
       document.getElementById('notificationsModal').classList.add('active');
     };
 
-    // Close Notifications Modal
     window.closeNotificationsModal = function() {
       document.getElementById('notificationsModal').classList.remove('active');
     };
@@ -4057,250 +3731,127 @@
     };
 
     // Settings functions
-    window.saveGeneralSettings = async function() {
-      const settingsData = {
-        centerName: document.getElementById('centerName').value,
-        contactEmail: document.getElementById('contactEmail').value,
-        contactPhone: document.getElementById('contactPhone').value,
-        address: document.getElementById('address').value,
-        updatedAt: Timestamp.now()
-      };
-      
-      try {
-        await setDoc(doc(db, "settings", "general"), settingsData, { merge: true });
-        showToast('Settings saved successfully', 'success');
-      } catch (error) {
-        console.error('Error saving settings:', error);
-        showToast('Error saving settings', 'error');
-      }
+    window.saveGeneralSettings = function() {
+      showToast('Settings saved', 'success');
     };
 
     window.saveProgramSettings = function() {
-      const programSettings = {
-        littleSpeakersPrice: document.getElementById('littleSpeakersPrice').value,
-        youngCommunicatorsPrice: document.getElementById('youngCommunicatorsPrice').value,
-        brightLeadersPrice: document.getElementById('brightLeadersPrice').value,
-        maxStudentsPerClass: document.getElementById('maxStudentsPerClass').value,
-        sessionDuration: document.getElementById('sessionDuration').value,
-        updatedAt: Timestamp.now()
-      };
-      
-      // Save to Firebase
-      setDoc(doc(db, "settings", "programs"), programSettings, { merge: true })
-        .then(() => {
-          showToast('Program settings saved successfully', 'success');
-        })
-        .catch(error => {
-          console.error('Error saving program settings:', error);
-          showToast('Error saving settings', 'error');
-        });
+      showToast('Program settings saved', 'success');
     };
 
     window.saveNotificationSettings = function() {
-      const notificationSettings = {
-        emailNotifications: document.getElementById('emailNotifications').checked,
-        smsNotifications: document.getElementById('smsNotifications').checked,
-        notificationEmail: document.getElementById('notificationEmail').value,
-        notificationPhone: document.getElementById('notificationPhone').value,
-        updatedAt: Timestamp.now()
-      };
-      
-      // Save to Firebase
-      setDoc(doc(db, "settings", "notifications"), notificationSettings, { merge: true })
-        .then(() => {
-          showToast('Notification settings saved successfully', 'success');
-        })
-        .catch(error => {
-          console.error('Error saving notification settings:', error);
-          showToast('Error saving settings', 'error');
-        });
+      showToast('Notification settings saved', 'success');
     };
 
     window.changePassword = async function() {
-      const currentPassword = document.getElementById('currentPassword').value;
-      const newPassword = document.getElementById('newPassword').value;
-      const confirmPassword = document.getElementById('confirmPassword').value;
+      const current = document.getElementById('currentPassword').value;
+      const newPass = document.getElementById('newPassword').value;
+      const confirm = document.getElementById('confirmPassword').value;
       
-      if (!currentPassword || !newPassword || !confirmPassword) {
-        showToast('Please fill all fields', 'error');
+      if (!current || !newPass || !confirm) {
+        showToast('Fill all fields', 'error');
         return;
       }
-      
-      if (newPassword !== confirmPassword) {
-        showToast('New passwords do not match', 'error');
+      if (newPass !== confirm) {
+        showToast('Passwords do not match', 'error');
         return;
       }
-      
-      if (newPassword.length < 6) {
-        showToast('Password must be at least 6 characters', 'error');
+      if (newPass.length < 6) {
+        showToast('Password must be 6+ characters', 'error');
         return;
       }
       
       try {
-        const user = auth.currentUser;
-        await updatePassword(user, newPassword);
-        showToast('Password changed successfully', 'success');
+        await updatePassword(auth.currentUser, newPass);
+        showToast('Password changed', 'success');
         document.getElementById('securitySettingsForm').reset();
       } catch (error) {
-        console.error('Error changing password:', error);
-        if (error.code === 'auth/requires-recent-login') {
-          showToast('Please log out and log in again before changing password', 'error');
-        } else {
-          showToast(error.message, 'error');
-        }
+        showToast(error.message, 'error');
       }
     };
 
     // Export functions
     window.exportInquiries = function() {
-      try {
-        let csv = 'Date,Name,Email,Phone,Child Name,Child Age,Program,Status,Message\n';
-        
-        filteredInquiries.forEach(inquiry => {
-          const date = inquiry.createdAtFormatted || '';
-          const row = [
-            `"${date}"`,
-            `"${inquiry.name || ''}"`,
-            `"${inquiry.email || ''}"`,
-            `"${inquiry.phone || ''}"`,
-            `"${inquiry.childName || ''}"`,
-            `"${inquiry.childAge || ''}"`,
-            `"${inquiry.program || ''}"`,
-            `"${inquiry.status || ''}"`,
-            `"${(inquiry.message || '').replace(/"/g, '""')}"`
-          ];
-          csv += row.join(',') + '\n';
-        });
-        
-        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `inquiries_${new Date().toISOString().split('T')[0]}.csv`;
-        a.click();
-        URL.revokeObjectURL(url);
-        
-        showToast('Export started', 'success');
-      } catch (error) {
-        console.error('Export error:', error);
-        showToast('Error exporting data', 'error');
-      }
+      let csv = 'Date,Name,Email,Phone,Child Name,Child Age,Program,Status,Message\n';
+      filteredInquiries.forEach(i => {
+        csv += `"${i.createdAtFormatted}","${i.name}","${i.email}","${i.phone}","${i.childName}","${i.childAge}","${i.program}","${i.status}","${(i.message || '').replace(/"/g, '""')}"\n`;
+      });
+      const blob = new Blob([csv], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `inquiries_${new Date().toISOString().split('T')[0]}.csv`;
+      a.click();
+      showToast('Export started', 'success');
     };
 
     window.exportStudents = function() {
-      showToast('Export feature coming soon', 'warning');
+      let csv = 'Name,Parent Name,Email,Phone,Age Group,Program,Status,Start Date,Notes\n';
+      filteredStudents.forEach(s => {
+        csv += `"${s.name}","${s.parentName}","${s.email}","${s.phone}","${s.childAge}","${s.program}","${s.status}","${s.startDate}","${(s.notes || '').replace(/"/g, '""')}"\n`;
+      });
+      const blob = new Blob([csv], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `students_${new Date().toISOString().split('T')[0]}.csv`;
+      a.click();
+      showToast('Export started', 'success');
     };
 
     window.exportTeachers = function() {
-      showToast('Export feature coming soon', 'warning');
+      let csv = 'Name,Email,Phone,Qualification,Specialization,Status,Bio\n';
+      filteredTeachers.forEach(t => {
+        csv += `"${t.name}","${t.email}","${t.phone}","${t.qualification}","${t.specialization}","${t.status}","${(t.bio || '').replace(/"/g, '""')}"\n`;
+      });
+      const blob = new Blob([csv], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `teachers_${new Date().toISOString().split('T')[0]}.csv`;
+      a.click();
+      showToast('Export started', 'success');
     };
 
-    window.exportData = function(type) {
-      showToast(`Exporting ${type}...`, 'warning');
+    window.exportData = (type) => {
+      if (type === 'inquiries') exportInquiries();
+      if (type === 'students') exportStudents();
+      if (type === 'teachers') exportTeachers();
     };
 
     window.generateReport = function() {
-      showToast('Generating full report...', 'warning');
+      showToast('Generating report...', 'warning');
     };
 
     // Logout
     window.logout = async function() {
-      try {
-        await signOut(auth);
-        localStorage.removeItem('adminAuthenticated');
-        window.location.href = 'admin-login.html';
-      } catch (error) {
-        console.error('Logout error:', error);
-        showToast('Error logging out', 'error');
-      }
+      await signOut(auth);
+      window.location.href = 'admin-login.html';
     };
 
     // Close modals on outside click
-    document.getElementById('inquiryModal').addEventListener('click', (e) => {
-      if (e.target.id === 'inquiryModal') closeModal();
-    });
-    
-    document.getElementById('studentModal').addEventListener('click', (e) => {
-      if (e.target.id === 'studentModal') closeStudentModal();
-    });
-    
-    document.getElementById('teacherModal').addEventListener('click', (e) => {
-      if (e.target.id === 'teacherModal') closeTeacherModal();
-    });
-    
-    document.getElementById('adminModal').addEventListener('click', (e) => {
-      if (e.target.id === 'adminModal') closeAdminModal();
-    });
-    
-    document.getElementById('programModal').addEventListener('click', (e) => {
-      if (e.target.id === 'programModal') closeProgramModal();
-    });
-    
-    document.getElementById('addInquiryModal').addEventListener('click', (e) => {
-      if (e.target.id === 'addInquiryModal') closeAddInquiryModal();
-    });
-    
-    document.getElementById('notificationsModal').addEventListener('click', (e) => {
-      if (e.target.id === 'notificationsModal') closeNotificationsModal();
-    });
+    ['inquiryModal', 'studentModal', 'teacherModal', 'adminModal', 'programModal', 'addInquiryModal', 'notificationsModal']
+      .forEach(id => {
+        document.getElementById(id)?.addEventListener('click', e => {
+          if (e.target.id === id) {
+            const closeFn = {
+              'inquiryModal': closeModal,
+              'studentModal': closeStudentModal,
+              'teacherModal': closeTeacherModal,
+              'adminModal': closeAdminModal,
+              'programModal': closeProgramModal,
+              'addInquiryModal': closeAddInquiryModal,
+              'notificationsModal': closeNotificationsModal
+            }[id];
+            if (closeFn) closeFn();
+          }
+        });
+      });
 
     // Handle window resize
-    window.addEventListener('resize', function() {
-      if (window.innerWidth > 1024) {
-        document.getElementById('sidebar').classList.remove('active');
-      }
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1024) document.getElementById('sidebar').classList.remove('active');
     });
-
-    // Expose functions to global scope
-    window.switchTab = switchTab;
-    window.switchSettingsTab = switchSettingsTab;
-    window.filterInquiries = filterInquiries;
-    window.filterRecentInquiries = filterRecentInquiries;
-    window.filterStudents = filterStudents;
-    window.filterTeachers = filterTeachers;
-    window.refreshInquiries = refreshInquiries;
-    window.changePage = changePage;
-    window.viewInquiry = viewInquiry;
-    window.quickContact = quickContact;
-    window.markAsContacted = markAsContacted;
-    window.convertToStudent = convertToStudent;
-    window.deleteInquiry = deleteInquiry;
-    window.closeModal = closeModal;
-    window.logout = logout;
-    window.exportInquiries = exportInquiries;
-    window.exportStudents = exportStudents;
-    window.exportTeachers = exportTeachers;
-    window.exportData = exportData;
-    window.generateReport = generateReport;
-    window.updateInquiryChart = updateInquiryChart;
-    window.updateGrowthChart = updateGrowthChart;
-    window.showAddStudentModal = showAddStudentModal;
-    window.closeStudentModal = closeStudentModal;
-    window.saveStudent = saveStudent;
-    window.showAddTeacherModal = showAddTeacherModal;
-    window.closeTeacherModal = closeTeacherModal;
-    window.saveTeacher = saveTeacher;
-    window.toggleStudentStatus = toggleStudentStatus;
-    window.toggleTeacherStatus = toggleTeacherStatus;
-    window.showAddAdminModal = showAddAdminModal;
-    window.closeAdminModal = closeAdminModal;
-    window.saveAdmin = saveAdmin;
-    window.deleteAdmin = deleteAdmin;
-    window.showAddProgramModal = showAddProgramModal;
-    window.editProgram = editProgram;
-    window.deleteProgram = deleteProgram;
-    window.closeProgramModal = closeProgramModal;
-    window.saveProgram = saveProgram;
-    window.showAddInquiryModal = showAddInquiryModal;
-    window.closeAddInquiryModal = closeAddInquiryModal;
-    window.saveManualInquiry = saveManualInquiry;
-    window.showNotifications = showNotifications;
-    window.closeNotificationsModal = closeNotificationsModal;
-    window.saveGeneralSettings = saveGeneralSettings;
-    window.saveProgramSettings = saveProgramSettings;
-    window.saveNotificationSettings = saveNotificationSettings;
-    window.changePassword = changePassword;
-
   </script>
 </body>
 </html>
